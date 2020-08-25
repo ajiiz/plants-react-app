@@ -7,16 +7,18 @@
     align-items: center;
     text-align: center;
     padding-top: 2.5%;
-    font-size: 25px;
+    font-size: 15px;
 
-    .menu-logo {
+    &__logo {
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        font-size: 1.4em;
+        font-size: 2.5em;
         border-bottom: solid white 2px;
     }
 
-    ul {
+    &__list {
+        font-size: 1.5em;
+        text-decoration: none;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -24,14 +26,14 @@
         width: 25%;
         justify-content: center;
         margin-top: 0.5em;
-        li {
+        &__items {
             cursor: pointer;
             padding: 0.3em;
             flex: 0.4;
             transition: 0.4s ease-out;
         }
 
-        li:hover {
+        &__items:hover {
             background-color: white;
             color: black;
         }
