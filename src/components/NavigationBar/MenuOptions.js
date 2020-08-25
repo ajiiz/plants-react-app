@@ -6,11 +6,12 @@ const MenuOptions = () => {
 
     const activeStyles = {
         color: "black",
-        backgroundColor: ""
+        backgroundColor: "#bbbb"
     }
 
     const StyledLink = styled(NavLink)`
         text-decoration: none;
+        color: inherit;
         &:focus, &:hover, &:visited, &:link, &:active {
             text-decoration: none;
         }
