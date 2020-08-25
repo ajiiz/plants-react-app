@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/App.css'
-import Menu from './Menu'
+import '../styles/App/App.css'
+import Menu from './MenuItems/Menu'
 
 const App = () => {
     return (
