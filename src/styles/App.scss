@@ -10,15 +10,17 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
 
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
+}
 
 main {
     min-height: 100vh;
-    max-width: 80vw;
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     background-color: rgb(15,15,15);
 }
