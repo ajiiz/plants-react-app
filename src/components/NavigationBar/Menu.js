@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/Menu/menu.css'
+import '../../styles/NavigationBar/menu.css'
 import Logo from './Logo'
 import MenuOptions from './MenuOptions'
 

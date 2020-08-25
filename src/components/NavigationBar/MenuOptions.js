@@ -2,9 +2,10 @@ import React from 'react'
 
 const MenuOptions = () => {
     return (
-        <div>
-
-        </div>
+        <ul>
+            <li>About</li>
+            <li>Plants</li>
+        </ul>
     )
 }
 
