@@ -23,8 +23,19 @@ header .wrapper {
 
 header .wrapper .title {
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-size: 4rem;
-  color: #2d381a;
+  color: rgba(45, 56, 26, 0.904);
   font-weight: bolder;
+}
+
+header .wrapper .title span {
+  color: #7ca338;
+}
+
+header .wrapper .subtitle {
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  letter-spacing: 0.2em;
+  color: rgba(45, 56, 26, 0.849);
 }
