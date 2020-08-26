@@ -5,8 +5,7 @@ import styled from 'styled-components'
 const MenuOptions = () => {
 
     const activeStyles = {
-        color: "black",
-        backgroundColor: "#bbbb"
+        border: '2px solid rgb(85,107,47)'
     }
 
     const StyledLink = styled(NavLink)`
@@ -18,11 +17,13 @@ const MenuOptions = () => {
     `
     return (
         <ul className="menu__list">
+            <li className="menu__list__items">
             <StyledLink
                 to="/about"
                 activeStyle={activeStyles}>
-                    <li className="menu__list__items">About</li>
+                    About
             </StyledLink>
+            </li>
             <StyledLink
                 to="/plants"
                 activeStyle={activeStyles}>
