@@ -13,24 +13,24 @@
         font-weight: bold;
         text-transform: uppercase;
         font-size: 2em;
-        margin: 1em 0em 1em 0em;
     }
 
     &__list {
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 0.15em;
-        margin: 1em 0em 1em 0em;
 
         text-decoration: none;
         list-style-type: none;
 
         width: 35%;
         display: flex;
-        justify-content: stretch;
+        justify-content: space-evenly;
         flex-wrap: nowrap;
         &__items {
             cursor: pointer;
+            padding: 0.3em 1em 0.3em 1em;
+            white-space: nowrap;
             transition: 0.4s ease-out;
         }
 
