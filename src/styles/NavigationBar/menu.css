@@ -23,7 +23,7 @@
   margin-right: 5em;
   text-decoration: none;
   list-style-type: none;
-  width: 35%;
+  width: 40%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: nowrap;
@@ -37,6 +37,6 @@
 }
 
 .menu__list__items:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.548);
   color: black;
 }
