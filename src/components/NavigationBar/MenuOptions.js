@@ -28,6 +28,11 @@ const MenuOptions = () => {
                 activeStyle={activeStyles}>
                 <li className="menu__list__items">Plants</li>
             </StyledLink>
+            <StyledLink
+                to="/faq"
+                activeStyle={activeStyles}>
+                <li className="menu__list__items">Faq</li>
+            </StyledLink>
         </ul>
     )
 }
