@@ -8,7 +8,7 @@ const Menu = () => {
     const [navbar, setNavBar] = useState(false)
 
     const changeBackground = () => {
-        (window.scrollY >= 80) ?
+        (window.scrollY >= 100) ?
         setNavBar(true)
         : setNavBar(false)
     }
