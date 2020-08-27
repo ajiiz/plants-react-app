@@ -1,10 +1,12 @@
 import React from 'react'
 
-const AboutItems = ( {title, img, text} ) => {
+const AboutItems = ( { img, text} ) => {
+
     return (
-        <div className='about__item'>
-            <img src={img} alt={title}></img>
-            <h1>{title}</h1>
+        <div className='about__items__item'>
+            <div className='imagewrapper'>
+                <img className="image" src={img}></img>
+            </div>
             <p>{text}</p>
         </div>
     )

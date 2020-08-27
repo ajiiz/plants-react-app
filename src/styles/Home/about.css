@@ -3,17 +3,47 @@
   height: 100vh;
   background-color: rgba(243, 243, 243, 0.863);
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.about .title {
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  letter-spacing: 0.2em;
+  color: rgba(45, 56, 26, 0.849);
+}
+
+.about .divider {
+  margin-top: 0.1em;
+  border: 1.5px solid rgba(45, 56, 26, 0.658);
+  border-radius: 1px;
+  width: 5%;
 }
 
 .about__items {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  margin-top: 3rem;
 }
 
-.about__items img {
-  width: 100px;
-  height: 100px;
+.about__items__item {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about__items__item .imagewrapper {
+  height: 50%;
+}
+
+.about__items__item .imagewrapper img {
+  width: 100%;
+  height: 100%;
 }
