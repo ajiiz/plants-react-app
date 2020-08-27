@@ -1,4 +1,10 @@
+.menu.active {
+    background: rgba(255, 255, 255, 0.658);
+    padding: 0.5em;
+}
+
 .menu {
+    background: transparent;
     display: flex;
     width:100%;
     flex-direction: row;
@@ -7,6 +13,7 @@
     font-size: 15px;
     padding: 1.5em;
     position: fixed;
+    transition: 0.4s ease-out;
 
     &__logo {
         font-weight: bold;
