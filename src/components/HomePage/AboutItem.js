@@ -7,8 +7,10 @@ const AboutItems = ( { img, text} ) => {
             <div className='imagewrapper'>
                 <img className="image" src={img}></img>
             </div>
-            <hr className="divider"></hr>
-            <p>{text}</p>
+            <div className="itemcontent">
+                <hr className="divider"></hr>
+                <div className="itemcontent__text">{text}</div>
+            </div>
         </div>
     )
 }

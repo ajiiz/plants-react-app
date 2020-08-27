@@ -8,8 +8,10 @@ import Image_3 from '../../assets/image-about-3.jpg'
 const About = () => {
     return (
         <div className="about">
-            <h3 className="title">green power</h3>
-            <hr className="divider"></hr>
+            <div className="about__title">
+                <h3 className="text">green power</h3>
+                <hr className="divider"></hr>
+            </div>
             <div className="about__items">
                 <AboutItem text="lorem ipsum 1" img={Image_1}/>
                 <AboutItem text="lorem ipsum 2" img={Image_2}/>
