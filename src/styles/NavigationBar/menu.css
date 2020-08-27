@@ -1,7 +1,6 @@
 .menu {
-  width: 100%;
-  color: #313f19;
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -14,13 +13,13 @@
   font-weight: bold;
   text-transform: uppercase;
   font-size: 2em;
+  margin-left: 1em;
 }
 
 .menu__list {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.15em;
-  margin-right: 5em;
   text-decoration: none;
   list-style-type: none;
   width: 40%;

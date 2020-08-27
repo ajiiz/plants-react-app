@@ -33,7 +33,3 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(75, 94, 42, 0.849);
 }
-
-nav {
-  padding: 0 40px;
-}

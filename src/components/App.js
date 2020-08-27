@@ -9,9 +9,7 @@ import Faq from './FaqPage/Faq'
 const App = () => {
     return (
             <Router>
-                <nav>
                     <Menu />
-                </nav>
                     <Switch>
                         <Route exact path="/">
                             <Redirect to="/home"></Redirect>
