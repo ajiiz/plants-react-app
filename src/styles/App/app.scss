@@ -10,10 +10,7 @@ html, body {
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: overlay;
-    overflow-y: overlay;
 }
-
 //Scrollbar Properties
     /* Width */
 ::-webkit-scrollbar {
@@ -35,7 +32,3 @@ html, body {
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(75, 94, 42, 0.849);
   }
-
-nav {
-    padding: 0 40px;
-}
