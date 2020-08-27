@@ -1,12 +1,12 @@
 import React from 'react'
-import About from './About'
+import Quote from './Quote'
 import Header from './Header'
 
 const Home = () => {
     return (
         <div>
             <Header />
-            <About />
+            <Quote />
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const AboutItems = ( { img, text} ) => {
+const QuoteItems = ( { img, text} ) => {
 
     return (
-        <div className='about__items__item'>
+        <div className='quotes__items__item'>
             <div className='imagewrapper'>
                 <img className="image" src={img}></img>
             </div>
@@ -15,4 +15,4 @@ const AboutItems = ( { img, text} ) => {
     )
 }
 
-export default AboutItems
+export default QuoteItems
