@@ -17,8 +17,8 @@
 
 .quotes__title .text {
   text-transform: uppercase;
-  font-size: 1.4rem;
-  letter-spacing: 0.2em;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
   color: #587920;
 }
 
@@ -43,8 +43,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 1rem;
-  background-color: rgba(245, 245, 245, 0.815);
+  margin: 0rem 1rem 1rem 1rem;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -52,6 +51,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.781);
   height: 50%;
   width: 100%;
 }
@@ -64,7 +64,7 @@
 
 .quotes__items__item .itemcontent__text {
   width: 80%;
-  font-size: 1em;
+  font-size: 0.9em;
   color: rgba(45, 56, 26, 0.849);
   text-align: center;
   line-height: 1.5em;
