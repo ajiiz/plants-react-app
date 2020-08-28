@@ -6,6 +6,7 @@ import Image_2 from '../../assets/image-about-2.jpg'
 import Image_3 from '../../assets/image-about-3.jpg'
 
 const Quote = () => {
+
     return (
         <div className="quotes">
             <div className="quotes__title">
@@ -13,9 +14,9 @@ const Quote = () => {
                 <hr className="divider"></hr>
             </div>
             <div className="quotes__items">
-                <QuoteItem text="lorem ipsum 1" img={Image_3}/>
-                <QuoteItem text="lorem ipsum 2" img={Image_1}/>
-                <QuoteItem text="lorem ipsum 3" img={Image_2}/>
+                <QuoteItem text="lorem ipsum 1" img={Image_3} altText="have" />
+                <QuoteItem text="lorem ipsum 2" img={Image_1} altText="a nice" />
+                <QuoteItem text="lorem ipsum 3" img={Image_2} alteText="day" />
             </div>
         </div>
     )

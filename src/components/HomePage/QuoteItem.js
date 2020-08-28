@@ -1,11 +1,11 @@
 import React from 'react'
 
-const QuoteItems = ( { img, text} ) => {
+const QuoteItems = ( { img, text, altText} ) => {
 
     return (
         <div className='quotes__items__item'>
             <div className='imagewrapper'>
-                <img className="image" src={img}></img>
+                <img className="image" src={img} alt={altText}></img>
             </div>
             <div className="itemcontent">
                 <hr className="divider"></hr>
