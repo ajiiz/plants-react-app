@@ -1,9 +1,10 @@
 .menu.active {
-    background: rgba(255, 255, 255, 0.541);
+    background: rgba(255, 255, 255, 0.76);
     padding: 0.5em;
 }
 
 .menu {
+    z-index: 1;
     background: transparent;
     display: flex;
     width:100%;
@@ -43,8 +44,8 @@
         }
 
         &__items:hover {
-            background-color: rgba(255, 255, 255, 0.548);
-            color: black;
+            background-color:rgba(75, 102, 28, 0.74)
+
         }
     }
 }

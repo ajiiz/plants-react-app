@@ -64,9 +64,10 @@
 
 .quotes__items__item .itemcontent__text {
   width: 80%;
+  font-size: 1em;
   color: rgba(45, 56, 26, 0.849);
   text-align: center;
-  word-wrap: break-word;
+  line-height: 1.5em;
 }
 
 .quotes__items__item .imagewrapper {
