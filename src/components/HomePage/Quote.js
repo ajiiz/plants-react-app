@@ -14,9 +14,21 @@ const Quote = () => {
                 <hr className="divider"></hr>
             </div>
             <div className="quotes__items">
-                <QuoteItem text="lorem ipsum 1" img={Image_3} altText="have" />
-                <QuoteItem text="lorem ipsum 2" img={Image_1} altText="a nice" />
-                <QuoteItem text="lorem ipsum 3" img={Image_2} alteText="day" />
+                <QuoteItem
+                    text="The plants are very psychic, but they can express it only by silence and beauty."
+                    img={Image_3}
+                    altText="have"
+                />
+                <QuoteItem
+                    text="Working with plants will teach you all other social commitments in a soothing way."
+                    img={Image_1}
+                    altText="a nice"
+                />
+                <QuoteItem
+                    text="So plant your own gardens and decorate your own soul, instead of waiting for someone to bring you flowers."
+                    img={Image_2}
+                    alteText="day"
+                />
             </div>
         </div>
     )
