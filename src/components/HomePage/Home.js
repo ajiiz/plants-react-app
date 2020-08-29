@@ -2,7 +2,7 @@ import React from 'react'
 import Quote from './Quote'
 import Header from './Header'
 import About from './About'
-import Contact from './Contact'
+import Footer from '../Footer'
 
 const Home = () => {
     return (
@@ -10,7 +10,7 @@ const Home = () => {
             <Header />
             <Quote />
             <About />
-            <Contact />
+            <Footer />
         </div>
     )
 }
