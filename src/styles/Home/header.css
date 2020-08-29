@@ -42,6 +42,7 @@ header .wrapper .subtitle {
 
 header .wrapper .divider {
   margin-top: 0.8em;
-  border: 2.5px solid rgba(45, 56, 26, 0.658);
+  border: 2px solid rgba(45, 56, 26, 0.658);
+  border-radius: 4px;
   width: 13%;
 }

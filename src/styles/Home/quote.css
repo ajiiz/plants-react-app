@@ -24,9 +24,9 @@
 
 .quotes__title .divider {
   margin-top: 0.1em;
-  border: 1.5px solid rgba(75, 102, 28, 0.74);
-  border-radius: 1px;
-  width: 25%;
+  border: 2px solid rgba(75, 102, 28, 0.74);
+  border-radius: 4px;
+  width: 30%;
 }
 
 .quotes__items {
