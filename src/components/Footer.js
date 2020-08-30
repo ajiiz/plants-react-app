@@ -10,6 +10,11 @@ const Footer = () => {
         color: 'rgba(45, 56, 26, 0.849)'
     }
 
+    const getYear = (year) => {
+        year = new Date().getFullYear()
+        return year
+    }
+
     return (
         <footer>
             <div className="contact">
@@ -39,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright">
-                <h3>Made by Piotr Wrobel 2020</h3>
+                <h3 className="copyright__text">Copyright &copy; {getYear()}, Piotr Wrobel </h3>
             </div>
         </footer>
     )
