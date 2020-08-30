@@ -58,4 +58,19 @@ footer {
             }
         }
     }
+    .copyright {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 20%;
+        width: 98%;
+
+        &__text {
+            font-size: 0.9em;
+            color:rgba(45, 56, 26, 0.849);
+            line-height: 1.5em;
+            font-weight: lighter;
+            white-space: pre-line;
+        }
+    }
 }

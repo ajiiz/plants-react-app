@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright">
-                <h3 className="copyright__text">Copyright &copy; {getYear()}, Piotr Wrobel </h3>
+                <h3 className="copyright__text">Copyright &copy; {getYear()}, Wrobel Piotr </h3>
             </div>
         </footer>
     )
