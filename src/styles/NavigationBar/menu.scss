@@ -27,10 +27,8 @@
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 0.15em;
-
         text-decoration: none;
         list-style-type: none;
-
         width:40%;
         display: flex;
         justify-content: space-evenly;
@@ -45,7 +43,6 @@
 
         &__items:hover {
             background-color:rgba(75, 102, 28, 0.74)
-
         }
     }
 }

@@ -6,7 +6,7 @@ const About = () => {
         <div className="about">
             <div className="about__imagewrapper"></div>
             <div className="about__textcontainer">
-                <h3 className="header">master the green</h3>
+                <h3 className="title">master the green</h3>
                 <hr className="divider"></hr>
                 <div className="text"><p>
                 A wonderful serenity has taken possession
