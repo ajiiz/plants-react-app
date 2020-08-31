@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../styles/Plants/plants.css"
+import "../../styles/Plants/plants.scss"
 
 const Plants = () => {
     return (
