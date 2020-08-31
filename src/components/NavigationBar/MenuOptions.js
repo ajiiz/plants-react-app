@@ -2,20 +2,21 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
+const StyledLink = styled(NavLink)`
+text-decoration: none;
+color: inherit;
+border: 2px solid transparent;
+&:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+}
+`
+
 const MenuOptions = () => {
 
     const activeStyles = {
         borderColor: 'rgb(85,107,47)'
     }
 
-    const StyledLink = styled(NavLink)`
-        text-decoration: none;
-        color: inherit;
-        border: 2px solid transparent;
-        &:focus, &:hover, &:visited, &:link, &:active {
-            text-decoration: none;
-        }
-    `
     return (
         <ul className="menu__list">
             <StyledLink
