@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import '../../styles/NavigationBar/menu.scss'
 import Logo from './Logo'
 import MenuOptions from './MenuOptions'
+import Hamburger from './Hamburger'
 
 const Menu = () => {
 
@@ -20,6 +21,7 @@ const Menu = () => {
     return (
         <div className={navbar ? 'menu active' : 'menu'}>
             <Logo />
+            <Hamburger />
             <MenuOptions />
         </div>
     )
