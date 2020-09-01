@@ -1,10 +1,12 @@
 .menu.active {
     background: rgba(255, 255, 255, 0.76);
+    height: 10%;
     padding: 0.5em;
 }
 
 .menu {
     z-index: 1;
+    height: 15%;
     background: transparent;
     display: flex;
     width:100%;
@@ -21,6 +23,50 @@
         text-transform: uppercase;
         font-size: 2em;
         margin-left: 1em;
+        color: rgb(31, 39, 18);
+    }
+
+    &__btn {
+        position: relative;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        margin-right: 1em;
+        &__burger{
+            border-radius: 5px;
+            width: 40px;
+            height: 4px;
+            background-color: rgb(31, 39, 18);
+            transition: all .2s ease-in-out;
+        }
+        &__burger::after, &__burger::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            border-radius: 5px;
+            transition: all .2s ease-in-out;
+            background-color: rgb(31, 39, 18);
+        }
+        &__burger::before {
+            transform: translateY(-12px)
+        }
+        &__burger::after {
+            transform: translateY(12px);
+        }
+        &__open &__burger {
+            transform: translateX(-50px);
+            background: transparent;
+        }
+        &__open &__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+        &__open &__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
     }
 
     &__list {
@@ -58,12 +104,17 @@
 @media (max-width: 599px) {
     .menu {
         &__list{
+            position: absolute;
             a {
                 border: none;
             }
+            flex-direction: column;
             &__items {
-                display: none;
+                display: flex;
             }
+        }
+        &__btn {
+            display: flex;
         }
     }
 }
