@@ -10,6 +10,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 
     .wrapper{
         display: flex;
@@ -22,7 +23,7 @@ header {
         .title {
             text-transform: uppercase;
             letter-spacing: 0.25em;
-            font-size: 4rem;
+            font-size: 4em;
             color:rgba(45, 56, 26, 0.904);
             font-weight: bolder;
 
@@ -32,7 +33,7 @@ header {
         }
         .subtitle {
             text-transform: uppercase;
-            font-size: 1.35rem;
+            font-size: 1.35em;
             letter-spacing: 0.2em;
             color:rgba(45, 56, 26, 0.849);
         }
@@ -42,5 +43,11 @@ header {
             border-radius: 4px;
             width:13%;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        font-size: 13px;
     }
 }
