@@ -46,3 +46,24 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .menu {
+        &__list {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .menu {
+        &__list{
+            a {
+                border: none;
+            }
+            &__items {
+                display: none;
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    font-size: 16px;
 
     &__title {
         display:flex;
@@ -15,7 +16,7 @@
 
         .text {
             text-transform: uppercase;
-            font-size: 1.5rem;
+            font-size: 1.5em;
             letter-spacing: 0.1em;
             color:rgb(88, 121, 32);
         }
@@ -41,7 +42,7 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin: 0rem 1rem 1rem 1rem;
+            margin: 0em 1em 1em 1em;
             box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
             .itemcontent{
@@ -55,7 +56,7 @@
                 .divider {
                     border: 1px solid rgba(45, 56, 26, 0.658);
                     width:12%;
-                    margin: 1.5rem;
+                    margin: 1.5em;
                 }
                 &__text {
                     width: 80%;
