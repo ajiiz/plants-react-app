@@ -11,27 +11,36 @@ border: 2px solid transparent;
 }
 `
 
-const MenuOptions = () => {
+const MenuOptions = ({ isOpen }) => {
 
-    const activeStyles = {
+    const activeLinkStyles = {
         borderColor: 'rgb(85,107,47)'
     }
 
+    const activeBurger = {
+        display: 'flex',
+        width: '100%',
+        alignItems: 'center',
+        flexDirection: 'column',
+        fontSize: '3em',
+        marginBottom: '3em'
+    }
+
     return (
-        <ul className="menu__list">
+        <ul className="menu__list" style={isOpen ? activeBurger : null}>
             <StyledLink
                 to="/home"
-                activeStyle={activeStyles}>
+                activeStyle={activeLinkStyles}>
                 <li className="menu__list__items">Home</li>
             </StyledLink>
             <StyledLink
                 to="/plants"
-                activeStyle={activeStyles}>
+                activeStyle={activeLinkStyles}>
                 <li className="menu__list__items">Plants</li>
             </StyledLink>
             <StyledLink
                 to="/faq"
-                activeStyle={activeStyles}>
+                activeStyle={activeLinkStyles}>
                 <li className="menu__list__items">Faq</li>
             </StyledLink>
         </ul>
