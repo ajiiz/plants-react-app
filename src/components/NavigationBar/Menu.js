@@ -7,6 +7,11 @@ import Hamburger from './Hamburger'
 const Menu = () => {
 
     const [navbar, setNavBar] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeBackground)
+    }, [])
 
     const changeBackground = () => {
         (window.scrollY >= 100) ?
@@ -14,16 +19,18 @@ const Menu = () => {
         : setNavBar(false)
     }
 
-    useEffect(() => {
-        window.addEventListener('scroll', changeBackground)
-    }, [])
+    const handleClick = () => {
+        setIsOpen(!isOpen)
+    }
 
     return (
-        <div className={navbar ? 'menu active' : 'menu'}>
-            <Logo />
-            <Hamburger />
-            <MenuOptions />
-        </div>
+        <nav>
+            <div className={navbar ? 'menu active' : 'menu'}>
+                <Logo />
+                <Hamburger handleClick={handleClick} isOpen={isOpen} />
+                <MenuOptions />
+            </div>
+        </nav>
     )
 }
 

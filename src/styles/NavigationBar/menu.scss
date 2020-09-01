@@ -5,7 +5,7 @@
 }
 
 .menu {
-    z-index: 1;
+    z-index: 2;
     height: 15%;
     background: transparent;
     display: flex;
@@ -97,21 +97,42 @@
     .menu {
         &__list {
             width: 60%;
+            a {
+                border: none;
+            }
         }
     }
 }
 
 @media (max-width: 599px) {
-    .menu {
-        &__list{
-            position: absolute;
-            a {
-                border: none;
-            }
+    .menu-active {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: baseline;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.76);
+        &__logo-active {
+            width: 50%;
+            flex: 0.5;
+        }
+        &__btn-active {
+            width: 50%;
+            display: flex;
+            flex: 0.5;
+            justify-content: flex-end;
+        }
+        &__list-active {
+            display: flex;
+            width: 100%;
+            align-items: center;
             flex-direction: column;
-            &__items {
-                display: flex;
-            }
+            font-size: 3em;
+            margin-bottom: 1em;
+        }
+    }
+    .menu {
+        &__list {
+            display: none;
         }
         &__btn {
             display: flex;

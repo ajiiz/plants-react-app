@@ -1,13 +1,6 @@
 import React, { useState } from 'react'
 
-const Hamburger = () => {
-
-    const [isOpen, setIsOpen] = useState(false)
-
-    const handleClick = () => {
-        setIsOpen(!isOpen)
-    }
-
+const Hamburger = ({ handleClick, isOpen }) => {
     return (
         <div className={!isOpen ? "menu__btn" : "menu__btn menu__btn__open"} onClick={handleClick}>
             <div className="menu__btn__burger"></div>
