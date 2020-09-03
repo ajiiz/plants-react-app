@@ -80,3 +80,27 @@
         }
     }
 }
+
+
+@media (max-width: 900px) {
+    .quotes {
+        font-size: 13px;
+        height: fit-content;
+        padding: 0.5em;
+
+        &__title {
+            margin: 2em 0em 2em 0em;
+            font-size: 1.5em;
+        }
+
+        &__items {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .quotes {
+        font-size: 12px;
+    }
+}

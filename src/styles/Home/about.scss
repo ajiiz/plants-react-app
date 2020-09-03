@@ -4,6 +4,7 @@
     background-color: rgba(245, 245, 245, 0.075);
     display: flex;
     flex-direction: row;
+    font-size: 16px;
 
     &__imagewrapper{
         height: 100%;
@@ -21,7 +22,7 @@
 
         .title {
             text-transform: uppercase;
-            font-size: 1.4rem;
+            font-size: 1.4em;
             letter-spacing: 0.1em;
             color:rgb(88, 121, 32);
         }
