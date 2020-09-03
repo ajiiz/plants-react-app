@@ -79,12 +79,14 @@ footer {
 @media (max-width: 900px) {
     footer {
         background-color: rgba(243, 243, 243, 0.863);
+        height: 35vh;
         .contact {
             font-size: 18px;
 
             &__icons {
                 &__text {
                     width: 60%;
+                    font-size: 1.1em;
 
                     .divider {
                         width: 30%;
