@@ -6,6 +6,7 @@ footer {
         height: 80%;
         width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
@@ -21,7 +22,7 @@ footer {
                 margin-top: 1em;
                 margin-bottom: 1em;
                 text-transform: uppercase;
-                font-size: 1rem;
+                font-size: 1em;
                 width: 20%;
                 letter-spacing: 0.1em;
                 color:rgb(69, 94, 27);
@@ -47,7 +48,7 @@ footer {
                 &__text {
                     flex: 0.8;
                     font-size: 0.9em;
-                    color:rgba(45, 56, 26, 0.849);
+                    color:rgb(45, 56, 26);
                     line-height: 1.5em;
                     white-space: pre-line;
                 }
@@ -67,10 +68,33 @@ footer {
 
         &__text {
             font-size: 0.9em;
-            color:rgba(45, 56, 26, 0.849);
+            color:rgb(45, 56, 26);
             line-height: 1.5em;
             font-weight: lighter;
             white-space: pre-line;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    footer {
+        background-color: rgba(243, 243, 243, 0.863);
+        .contact {
+            font-size: 18px;
+
+            &__icons {
+                &__text {
+                    width: 60%;
+
+                    .divider {
+                        width: 30%;
+                    }
+                }
+
+                &__link {
+                    width: 60%;
+                }
+            }
         }
     }
 }
