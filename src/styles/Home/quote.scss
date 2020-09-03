@@ -81,32 +81,47 @@
     }
 }
 
-
 @media (max-width: 900px) {
     .quotes {
         height: fit-content;
         padding: 0.5em;
 
         &__title {
-            margin: 2em 0em 2em 0em;
-            font-size: 1.5em;
+            margin: 1em 0em 1em 0em;
+            font-size: 1.3em;
         }
 
         &__items {
             flex-direction: column;
+            font-size: 18px;
 
             &__item {
-                width: 80%;
+                width: 60%;
                 height: 70vh;
-                margin: 1em 0em 2em 0em;
+                margin: 1em 0em 1em 0em;
             }
 
             &__item:last-child {
-                margin-bottom: 4em;
+                margin-bottom: 3em;
             }
         }
     }
 }
 
 @media (max-width: 500px) {
+    .quotes {
+
+        &__title {
+            font-size: 1.5em;
+        }
+
+        &__items {
+            font-size: 20px;
+
+            &__item {
+                width: 80%;
+                height: 70vh;
+            }
+        }
+    }
 }
