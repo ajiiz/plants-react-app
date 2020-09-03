@@ -18,12 +18,12 @@
             text-transform: uppercase;
             font-size: 1.5em;
             letter-spacing: 0.1em;
-            color:rgb(88, 121, 32);
+            color:rgb(69, 94, 27);
         }
 
         .divider {
             margin-top: 0.1em;
-            border: 2px solid rgba(75, 102, 28, 0.74);
+            border: 2px solid rgba(75, 102, 28, 0.884);
             border-radius: 4px;
             width:30%;
         }
@@ -84,7 +84,6 @@
 
 @media (max-width: 900px) {
     .quotes {
-        font-size: 13px;
         height: fit-content;
         padding: 0.5em;
 
@@ -95,12 +94,19 @@
 
         &__items {
             flex-direction: column;
+
+            &__item {
+                width: 80%;
+                height: 70vh;
+                margin: 1em 0em 2em 0em;
+            }
+
+            &__item:last-child {
+                margin-bottom: 4em;
+            }
         }
     }
 }
 
 @media (max-width: 500px) {
-    .quotes {
-        font-size: 12px;
-    }
 }
