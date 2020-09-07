@@ -1,4 +1,5 @@
 import React from 'react'
+import NavigationBar from '../NavigationBar/Menu'
 
 const Faq = () => {
     return (

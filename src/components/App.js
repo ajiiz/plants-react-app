@@ -5,6 +5,7 @@ import Menu from './NavigationBar/Menu'
 import Home from './HomePage/Home'
 import Plants from './PlantsPage/Plants'
 import Faq from './FaqPage/Faq'
+import Footer from './Footer'
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                         <Route exact path="/plants" component={Plants} />
                         <Route exact path="/faq" component={Faq} />
                     </Switch>
+                    <Footer />
             </Router>
     )
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import Quote from './Quote'
 import Header from './Header'
 import About from './About'
-import Footer from '../Footer'
 
 const Home = () => {
     return (
@@ -10,7 +9,6 @@ const Home = () => {
             <Header />
             <Quote />
             <About />
-            <Footer />
         </div>
     )
 }
