@@ -25,6 +25,10 @@
             font-weight: bolder;
         }
 
+        &__title:nth-child(2) {
+            color:rgb(124, 163, 56);
+        }
+
         &__divider {
             border: 2px solid rgba(45, 56, 26, 0.815);
             border-radius: 4px;
