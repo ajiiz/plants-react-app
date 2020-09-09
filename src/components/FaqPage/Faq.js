@@ -1,6 +1,7 @@
 import React from 'react'
 import FaqContent from './FaqContent'
 import { FaqItems } from './FaqItems'
+import '../../styles/Faq/faq.scss'
 
 const Faq = () => {
 
