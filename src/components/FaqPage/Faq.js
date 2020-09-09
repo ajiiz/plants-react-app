@@ -13,9 +13,13 @@ const Faq = () => {
 
     return (
         <div className="faq">
-            <div className="faq__image"></div>
+            <div className="faq__image">
+                <h3 className="faq__image__title">frequently</h3>
+                <h3 className="faq__image__title">asked</h3>
+                <h3 className="faq__image__title">questions</h3>
+                <hr className="faq__image__divider"></hr>
+            </div>
             <div className="faq__content">
-                <h3 className="faq__content__title">faq</h3>
                 {items}
             </div>
         </div>
