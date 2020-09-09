@@ -14,7 +14,10 @@ const Faq = () => {
     return (
         <div className="faq">
             <div className="faq__image"></div>
-            {items}
+            <div className="faq__content">
+                <h3 className="faq__content__title">faq</h3>
+                {items}
+            </div>
         </div>
     )
 }
