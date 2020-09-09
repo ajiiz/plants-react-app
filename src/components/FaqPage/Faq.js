@@ -5,9 +5,7 @@ const Faq = () => {
     return (
         <div className="faq">
             <div className="faq__image"></div>
-            <div className="faq__content">
-                <FaqContent />
-            </div>
+            <FaqContent />
         </div>
     )
 }
