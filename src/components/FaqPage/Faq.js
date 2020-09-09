@@ -3,8 +3,11 @@ import NavigationBar from '../NavigationBar/Menu'
 
 const Faq = () => {
     return (
-        <div>
-            This is Faq
+        <div className="faq">
+            <div className="faq__image"></div>
+            <div className="faq__content">
+
+            </div>
         </div>
     )
 }
