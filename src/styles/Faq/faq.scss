@@ -70,7 +70,7 @@
             justify-content: center;
             text-align: justify;
             flex-direction: column;
-            margin: 2em;
+            margin-top: 2em;
 
             &__question {
                 margin-bottom: 0.5em;
@@ -89,6 +89,16 @@
                 width: 80%;
             }
 
+            &__divider {
+                border: 1px solid rgb(31, 39, 15);
+                border-radius: 4px;
+                width: 50%;
+                margin-top: 2em;
+            }
+
+            [class~='divider']:last-of-type  {
+                display: none;
+            }
         }
     }
 }

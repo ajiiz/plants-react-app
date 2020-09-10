@@ -7,6 +7,7 @@ const FaqContent = ({ question, answer }) => {
                 <span>{question[0]}</span>{question.substr(1,question.length-2)}
                 <span>{question[question.length-1]}</span></h3>
             <p className="faq__content__wrapper__answer">{answer}</p>
+            <hr className="faq__content__wrapper__divider"></hr>
         </div>
     )
 }
