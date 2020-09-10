@@ -87,6 +87,13 @@
 
             &__answer {
                 width: 80%;
+                color:rgb(31, 39, 15);
+
+                span {
+                    font-size: 1.5em;
+                    font-weight: bolder;
+                    letter-spacing: 0.1em;
+                }
             }
 
             &__divider {
@@ -98,6 +105,7 @@
         }
 
         &__wrapper:last-child {
+            margin-bottom: 4em;
             hr {
                 display: none;
             }
