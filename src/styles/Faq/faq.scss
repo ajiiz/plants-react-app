@@ -95,8 +95,10 @@
                 width: 50%;
                 margin-top: 2em;
             }
+        }
 
-            [class~='divider']:last-of-type  {
+        &__wrapper:last-child {
+            hr {
                 display: none;
             }
         }
