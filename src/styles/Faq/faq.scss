@@ -61,6 +61,7 @@
         justify-content: center;
         align-items: center;
         transform: translateY(-15vh);
+        margin-bottom: -12vh;
 
         &__wrapper {
             width: 60%;
@@ -82,6 +83,10 @@
                 span {
                     color:rgb(95, 128, 42);
                 }
+            }
+
+            &__answer {
+                width: 80%;
             }
 
         }
