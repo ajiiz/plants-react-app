@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Plants from './Plants'
 import "../../styles/Plants/plants.scss"
 
-const Plants = () => {
+const API_KEY = process.env.REACT_APP_API_KEY
+
+const PlantsContainer = () => {
+
+    useEffect(() => {
+        console.log(API_KEY)
+    })
+
     return (
-        <div className="plants">
-            This is Plants Page
-        </div>
+        <Plants />
     )
 }
 
-export default Plants
+export default PlantsContainer

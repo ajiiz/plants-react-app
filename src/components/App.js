@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-d
 import '../styles/App/app.scss'
 import Menu from './NavigationBar/Menu'
 import Home from './HomePage/Home'
-import Plants from './PlantsPage/Plants'
+import PlantsContainer from './PlantsPage/PlantsContainer'
 import Faq from './FaqPage/Faq'
 import Footer from './Footer'
 
@@ -16,7 +16,7 @@ const App = () => {
                             <Redirect to="/home"></Redirect>
                         </Route>
                         <Route exact path="/home" component={Home} />
-                        <Route exact path="/plants" component={Plants} />
+                        <Route exact path="/plants" component={PlantsContainer} />
                         <Route exact path="/faq" component={Faq} />
                     </Switch>
                     <Footer />
