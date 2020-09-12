@@ -5,7 +5,7 @@ import "../../styles/Plants/plants.scss"
 const PlantsContainer = () => {
     const [data, setData] = useState({})
     const [page, setPage] = useState(1)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -21,12 +21,19 @@ const PlantsContainer = () => {
     },[])
 
     const test = () => {
-        console.log(data.data[0].common_name)
+        console.log(data)
     }
     return (
         (!isLoading) ? (
             <>
             <div style={{height:'200px', width:'200px', backgroundColor:'red'}} onClick={()=>test()}>CLICK ME</div>
+            {
+                data.data.map((data, key) => {
+                    return(
+                        <h1 key={key}>{data.common_name}</h1>
+                    )
+                })
+            }
             </>
         ) : (
             <p>LOADING</p>
