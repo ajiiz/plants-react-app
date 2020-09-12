@@ -9,7 +9,7 @@ const PlantsContainer = () => {
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
-        URL: `https://trefle.io/api/v1/plants?order%5Byear%5D=desc&page=${page}&token=`
+        URL: `https://trefle.io/api/v1/plants?order%5Byear%5D=asc&page=${page}&token=`
     }
 
     useEffect(() => {
