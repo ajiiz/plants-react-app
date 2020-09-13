@@ -8,12 +8,12 @@
 
     &__header {
         width:100%;
-        height: 50vh;
-        background-image: url("../../assets/green-house-3.jpg");
+        height: 80vh;
+        background-image: url("../../assets/header-plants.jpg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-        box-shadow: inset 0 0 0 100vmax rgba(140, 236, 77, 0.356);
+        filter: contrast(70%);
     }
 
     &__plant-container {
