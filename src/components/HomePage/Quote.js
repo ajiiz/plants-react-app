@@ -1,9 +1,9 @@
 import React from 'react'
 import '../../styles/Home/quote.scss'
 import QuoteItem from './QuoteItem'
-import Image_1 from '../../assets/image-about-dark-1.jpg'
-import Image_2 from '../../assets/image-about-2.jpg'
-import Image_3 from '../../assets/image-about-3.jpg'
+import Image_1 from '../../assets/image-home-quote-1.jpg'
+import Image_2 from '../../assets/image-home-quote-2.jpg'
+import Image_3 from '../../assets/image-home-quote-3.jpg'
 
 const Quote = () => {
 
