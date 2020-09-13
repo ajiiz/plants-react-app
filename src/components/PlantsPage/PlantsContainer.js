@@ -30,7 +30,14 @@ const PlantsContainer = () => {
             {
                 data.data.map((data, key) => {
                     return(
-                        <h1 key={key}>{data.common_name}</h1>
+                        <Plants
+                            key={key}
+                            common_name={data.common_name}
+                            img_url={data.image_url}
+                            scientific_name={data.scientific_name}
+                            slug={data.slug}
+                            genus={data.genus}
+                        />
                     )
                 })
             }
