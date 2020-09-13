@@ -25,7 +25,7 @@ const PlantsContainer = () => {
     }
     return (
         (!isLoading) ? (
-            <>
+            <div className="plants">
             <div style={{height:'200px', width:'200px', backgroundColor:'red'}} onClick={()=>test()}>CLICK ME</div>
             {
                 data.data.map((data, key) => {
@@ -41,7 +41,7 @@ const PlantsContainer = () => {
                     )
                 })
             }
-            </>
+            </div>
         ) : (
             <p>LOADING</p>
         )
