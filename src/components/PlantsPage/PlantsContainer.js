@@ -23,11 +23,12 @@ const PlantsContainer = () => {
     const test = () => {
         console.log(data)
     }
+
     return (
-        (!isLoading) ? (
             <div className="plants">
-            <div style={{height:'200px', width:'200px', backgroundColor:'red'}} onClick={()=>test()}>CLICK ME</div>
+                <div className="plants__header"></div>
             {
+            (!isLoading) ?
                 data.data.map((data, key) => {
                     return(
                         <Plants
@@ -39,12 +40,9 @@ const PlantsContainer = () => {
                             genus={data.genus}
                         />
                     )
-                })
+                })  : <p>LOADING</p>
             }
             </div>
-        ) : (
-            <p>LOADING</p>
-        )
     )
 }
 
