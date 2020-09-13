@@ -112,3 +112,21 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .faq {
+        font-size: 17px;
+        &__image {
+            &__title {
+                font-size: 2.5em;
+            }
+        }
+        &__content {
+            width: 85%;
+
+            &__wrapper {
+                width: 90%;
+            }
+        }
+    }
+}
