@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Plants = ({ common_name, img_url, scientific_name, genus, slug}) => {
+const PlantsItems = ({ common_name, img_url, scientific_name, genus, slug}) => {
     return (
         <div className="plants__container__plant" onClick={()=>console.log(img_url)}>
             <img src={img_url} style={{width:'100px', height:'100px'}}></img>
@@ -12,4 +12,4 @@ const Plants = ({ common_name, img_url, scientific_name, genus, slug}) => {
     )
 }
 
-export default Plants
+export default PlantsItems

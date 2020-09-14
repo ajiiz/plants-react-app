@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Plants from './Plants'
+import PlantsItems from './PlantsItems'
 import "../../styles/Plants/plants.scss"
 
 const PlantsContainer = () => {
@@ -32,7 +32,7 @@ const PlantsContainer = () => {
                 (!isLoading) ?
                     data.data.map((data, key) => {
                         return(
-                            <Plants
+                            <PlantsItems
                                 key={key}
                                 common_name={data.common_name}
                                 img_url={data.image_url}
