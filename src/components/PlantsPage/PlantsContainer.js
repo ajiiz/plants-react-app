@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PlantsItems from './PlantsItems'
+import PlantsHeader from './PlantsHeader'
 import "../../styles/Plants/plants.scss"
 
 const PlantsContainer = () => {
