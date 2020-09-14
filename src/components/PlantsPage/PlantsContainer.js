@@ -27,7 +27,7 @@ const PlantsContainer = () => {
 
     return (
             <div className="plants">
-                <div className="plants__header"></div>
+                <PlantsHeader />
                 <div className="plants__container">
                 {
                 (!isLoading) ?
