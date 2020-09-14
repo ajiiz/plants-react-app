@@ -1,10 +1,9 @@
 .plants {
     color:rgb(49, 63, 25);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: fit-content;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__header {
         width:100%;
@@ -16,14 +15,25 @@
         filter: contrast(70%);
     }
 
-    &__plant-container {
-        font-size: 0.5em;
-        flex: .25;
-        display: inline-block;
+    &__container {
+        width: 80%;
+        background: red;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
-        width: 300px;
-        height: 300px;
+        height: fit-content;
+
+        &__plant {
+            font-size: 0.5em;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+        }
     }
 }

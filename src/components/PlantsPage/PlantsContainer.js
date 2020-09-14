@@ -27,21 +27,23 @@ const PlantsContainer = () => {
     return (
             <div className="plants">
                 <div className="plants__header"></div>
-            {
-            (!isLoading) ?
-                data.data.map((data, key) => {
-                    return(
-                        <Plants
-                            key={key}
-                            common_name={data.common_name}
-                            img_url={data.image_url}
-                            scientific_name={data.scientific_name}
-                            slug={data.slug}
-                            genus={data.genus}
-                        />
-                    )
-                })  : <p>LOADING</p>
-            }
+                <div className="plants__container">
+                {
+                (!isLoading) ?
+                    data.data.map((data, key) => {
+                        return(
+                            <Plants
+                                key={key}
+                                common_name={data.common_name}
+                                img_url={data.image_url}
+                                scientific_name={data.scientific_name}
+                                slug={data.slug}
+                                genus={data.genus}
+                            />
+                        )
+                    })  : <p>LOADING</p>
+                }
+                </div>
             </div>
     )
 }
