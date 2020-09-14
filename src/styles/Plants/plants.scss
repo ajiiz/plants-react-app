@@ -57,22 +57,29 @@
         transform: translateY(-15vh);
         margin-bottom: -8vh;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: fit-content;
         min-height: 100vh;
 
-        &__plant {
-            font-size: 0.5em;
+        &__content {
+            width:80%;
             display: flex;
-            justify-content: center;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            width: 300px;
-            height: 300px;
+            &__plant {
+                font-size: 0.5em;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 300px;
+                height: 300px;
+            }
         }
     }
 }

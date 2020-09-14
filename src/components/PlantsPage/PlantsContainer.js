@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
+import PlantsForm from './PlantsForm'
 import "../../styles/Plants/plants.scss"
 
 const PlantsContainer = () => {
@@ -29,21 +30,24 @@ const PlantsContainer = () => {
             <div className="plants">
                 <PlantsHeader />
                 <div className="plants__container">
-                {
-                (!isLoading) ?
-                    data.data.map((data, key) => {
-                        return(
-                            <PlantsItems
-                                key={key}
-                                common_name={data.common_name}
-                                img_url={data.image_url}
-                                scientific_name={data.scientific_name}
-                                slug={data.slug}
-                                genus={data.genus}
-                            />
-                        )
-                    })  : <p>LOADING</p>
-                }
+                    <PlantsForm />
+                    <div className="plants__container__content">
+                        {
+                            (!isLoading) ?
+                                data.data.map((data, key) => {
+                                    return(
+                                        <PlantsItems
+                                            key={key}
+                                            common_name={data.common_name}
+                                            img_url={data.image_url}
+                                            scientific_name={data.scientific_name}
+                                            slug={data.slug}
+                                            genus={data.genus}
+                                        />
+                                    )
+                            })  : <p>LOADING</p>
+                        }
+                    </div>
                 </div>
             </div>
     )
