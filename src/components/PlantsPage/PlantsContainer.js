@@ -12,22 +12,29 @@ const PlantsContainer = () => {
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
-        URL: `/api/v1/plants?order%5Byear%5D=asc&page=${page}&token=`
+        URL: `/api/v1/plants?order%5Byear%5D=asc`
     }
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+API.KEY)
+        fetch(API.URL+`&page=${page}`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => setData(json))
             .then(()=>setIsLoading(false))
     },[])
 
+    useEffect(() => {
+        setIsLoading(true)
+        fetch(API.URL+`&page=${page}`+"&token="+API.KEY)
+            .then(res => res.json())
+            .then(json => setData(json))
+            .then(()=>setIsLoading(false))
+    },[page])
+
     const changePage = (n) => {
-        if(n !== 0) setPage(n)
-        return (
-            console.log(page)
-        )
+        if(n !== 0) {
+            setPage(n)
+        }
     }
 
     return (
