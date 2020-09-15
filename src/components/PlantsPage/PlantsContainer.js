@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
 import PlantsForm from './PlantsForm'
+import PlantsPageSelect from './PlantsPageSelect'
 import "../../styles/Plants/plants.scss"
 
 const PlantsContainer = () => {
@@ -48,6 +49,7 @@ const PlantsContainer = () => {
                             })  : <p>LOADING</p>
                         }
                     </div>
+                    <PlantsPageSelect />
                 </div>
             </div>
     )
