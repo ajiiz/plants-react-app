@@ -24,7 +24,10 @@ const PlantsContainer = () => {
     },[])
 
     const changePage = (n) => {
-
+        if(n !== 0) setPage(n)
+        return (
+            console.log(page)
+        )
     }
 
     return (
