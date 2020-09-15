@@ -23,8 +23,8 @@ const PlantsContainer = () => {
             .then(()=>setIsLoading(false))
     },[])
 
-    const test = () => {
-        console.log(data)
+    const changePage = (n) => {
+
     }
 
     return (
@@ -49,7 +49,7 @@ const PlantsContainer = () => {
                             })  : <p>LOADING</p>
                         }
                     </div>
-                    <PlantsPageSelect />
+                    <PlantsPageSelect page={page} changePage={changePage} />
                 </div>
             </div>
     )
