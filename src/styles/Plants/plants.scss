@@ -81,9 +81,9 @@
                 width: 25%;
                 height: 70vh;
                 margin: 2em;
-                border: 2px solid rgba(31, 39, 15, 0.596);
+
+                border: 2px solid rgb(69, 94, 27);
                 box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
-                //background-color: rgba(243, 243, 243, 0.863);
 
                 &__image {
                     height: 60%;
@@ -107,13 +107,13 @@
                     text-transform: uppercase;
 
                     &__text:nth-of-type(even) {
-                        font-size: 0.55em;
-                        color: rgb(45, 56, 26);
+                        font-size: 0.6em;
+                        color:rgb(95, 128, 42);
                         opacity: 0.9;
                     }
 
                     &__divider {
-                        border: 1px solid rgba(45, 56, 26, 0.658);
+                        border: 1px solid rgb(69, 94, 27);
                         width:100%;
                         margin: 0.1em 0em 0.1em 0em;
                     }
