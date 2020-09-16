@@ -15,10 +15,10 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug}) => {
                 style={imgStyle}
             />
             <div className="plants__container__content__plant__information">
-                <p>common_name: {commonName}</p>
-                <p>scientific_name: {scientificName}</p>
-                <p>genus: {genus}</p>
-                <p>slug: {slug}</p>
+                <div><p>Common Name: </p><p>{commonName}</p></div>
+                <div><p>Scientific Name: </p><p>{scientificName}</p></div>
+                <div><p>Genus: </p><p>{genus}</p></div>
+                <div><p>Slug: </p><p>{slug}</p></div>
             </div>
         </div>
     )
