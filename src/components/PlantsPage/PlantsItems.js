@@ -1,11 +1,11 @@
 import React from 'react'
 
-const PlantsItems = ({ common_name, img_url, scientific_name, genus, slug}) => {
+const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug}) => {
     return (
-        <div className="plants__container__content__plant" onClick={()=>console.log(img_url)}>
-            <img alt="" src={img_url} style={{width:'100px', height:'100px'}}></img>
-            <p>common_name: {common_name}</p>
-            <p>scientific_name: {scientific_name}</p>
+        <div className="plants__container__content__plant" onClick={()=>console.log(imgUrl)}>
+            <img alt="" src={imgUrl} style={{width:'100px', height:'100px'}}></img>
+            <p>common_name: {commonName}</p>
+            <p>scientific_name: {scientificName}</p>
             <p>genus: {genus}</p>
             <p>slug: {slug}</p>
         </div>

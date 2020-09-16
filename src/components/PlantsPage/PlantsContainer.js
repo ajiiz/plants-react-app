@@ -7,7 +7,7 @@ import "../../styles/Plants/plants.scss"
 
 const PlantsContainer = () => {
     const [data, setData] = useState({})
-    const [page, setPage] = useState(1)
+    const [currentPage, setCurrentPage] = useState(1)
     const [totalPages, setTotalPages] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
 
@@ -18,18 +18,18 @@ const PlantsContainer = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+`&page=${page}`+"&token="+API.KEY)
+        fetch(API.URL+`&page=${currentPage}`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => {
                 setData(json)
                 setTotalPages(json.meta.total)
             })
             .then(()=>setIsLoading(false))
-    },[page])
+    },[currentPage])
 
-    const changePage = (n) => {
+    const changeCurrentPage = (n) => {
         if(n !== 0) {
-            setPage(n)
+            setCurrentPage(n)
         }
     }
 
@@ -49,9 +49,9 @@ const PlantsContainer = () => {
                                     return(
                                         <PlantsItems
                                             key={key}
-                                            common_name={data.common_name}
-                                            img_url={data.image_url}
-                                            scientific_name={data.scientific_name}
+                                            commonName={data.common_name}
+                                            imgUrl={data.image_url}
+                                            scientificName={data.scientific_name}
                                             slug={data.slug}
                                             genus={data.genus}
                                         />
@@ -59,7 +59,7 @@ const PlantsContainer = () => {
                             })  : <p>LOADING</p>
                         }
                     </div>
-                    <PlantsPageSelect page={page} changePage={changePage} />
+                    <PlantsPageSelect currentPage={currentPage} changeCurrentPage={changeCurrentPage} />
                 </div>
             </div>
     )

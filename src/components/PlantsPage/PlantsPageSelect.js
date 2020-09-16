@@ -1,21 +1,21 @@
 import React from 'react'
 
-const PlantsPageSelect = ({ page, changePage }) => {
+const PlantsPageSelect = ({ currentPage, changeCurrentPage }) => {
     return (
         <div plants__page-buttons>
             <button
-                style={{display: (page===1) ? 'none' : 'inline'}}
-                onClick={()=>changePage(page - 1)}>
+                style={{display: (currentPage===1) ? 'none' : 'inline'}}
+                onClick={()=>changeCurrentPage(currentPage - 1)}>
                 Previous
             </button>
-            <button onClick={()=>changePage(1)}>First</button>
-            <button onClick={()=>changePage(page)}>{ page }</button>
-            <button onClick={()=>changePage(page + 1)}>{ page + 1}</button>
-            <button onClick={()=>changePage(page + 2)}>{ page + 2}</button>
-            <button onClick={()=>changePage(256)}>Last</button>
+            <button onClick={()=>changeCurrentPage(1)}>First</button>
+            <button onClick={()=>changeCurrentPage(currentPage)}>{ currentPage }</button>
+            <button onClick={()=>changeCurrentPage(currentPage + 1)}>{ currentPage + 1}</button>
+            <button onClick={()=>changeCurrentPage(currentPage + 2)}>{ currentPage + 2}</button>
+            <button onClick={()=>changeCurrentPage(256)}>Last</button>
             <button
-                style={{display: (page===256) ? 'none' : 'inline'}}
-                onClick={()=>changePage(page + 1)}>
+                style={{display: (currentPage===256) ? 'none' : 'inline'}}
+                onClick={()=>changeCurrentPage(currentPage + 1)}>
                 Next
             </button>
         </div>
