@@ -8,26 +8,22 @@ import "../../styles/Plants/plants.scss"
 const PlantsContainer = () => {
     const [data, setData] = useState({})
     const [page, setPage] = useState(1)
+    const [totalPages, setTotalPages] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
-        URL: `/api/v1/plants?order%5Byear%5D=asc`
+        URL: `/api/v1/plants?`
     }
 
     useEffect(() => {
         setIsLoading(true)
         fetch(API.URL+`&page=${page}`+"&token="+API.KEY)
             .then(res => res.json())
-            .then(json => setData(json))
-            .then(()=>setIsLoading(false))
-    },[])
-
-    useEffect(() => {
-        setIsLoading(true)
-        fetch(API.URL+`&page=${page}`+"&token="+API.KEY)
-            .then(res => res.json())
-            .then(json => setData(json))
+            .then(json => {
+                setData(json)
+                setTotalPages(json.meta.total)
+            })
             .then(()=>setIsLoading(false))
     },[page])
 
@@ -37,8 +33,12 @@ const PlantsContainer = () => {
         }
     }
 
+    const test = () => {
+        console.log(totalPages)
+    }
+
     return (
-            <div className="plants">
+            <div className="plants" onClick={()=>test()}>
                 <PlantsHeader />
                 <div className="plants__container">
                     <PlantsForm />
