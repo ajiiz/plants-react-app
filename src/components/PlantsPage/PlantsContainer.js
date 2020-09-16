@@ -18,7 +18,7 @@ const PlantsContainer = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+`&page=2`+"&token="+API.KEY)
+        fetch(API.URL+`&page=${currentPage}`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => {
                 setData(json)

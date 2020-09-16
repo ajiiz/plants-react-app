@@ -79,6 +79,16 @@
                 align-items: center;
                 width: 300px;
                 height: 300px;
+
+                &__image {
+                    height: 50%;
+                    width: 100%;
+                }
+
+                &__information {
+                    height: 50%;
+                    width: 100%;
+                }
             }
         }
     }
