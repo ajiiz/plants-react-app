@@ -18,11 +18,13 @@ const PlantsContainer = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+`&page=${currentPage}`+"&token="+API.KEY)
+        fetch(API.URL+`&page=2`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => {
                 setData(json)
-                setTotalPages(json.meta.total)
+                let n = json.links.last
+                n = n.substring(20)
+                setTotalPages(n)
             })
             .then(()=>setIsLoading(false))
     },[currentPage])
@@ -35,6 +37,7 @@ const PlantsContainer = () => {
 
     const test = () => {
         console.log(totalPages)
+        console.log(data)
     }
 
     return (
@@ -59,7 +62,11 @@ const PlantsContainer = () => {
                             })  : <p>LOADING</p>
                         }
                     </div>
-                    <PlantsPageSelect currentPage={currentPage} changeCurrentPage={changeCurrentPage} />
+                    <PlantsPageSelect
+                        currentPage={currentPage}
+                        changeCurrentPage={changeCurrentPage}
+                        totalPages={totalPages}
+                    />
                 </div>
             </div>
     )
