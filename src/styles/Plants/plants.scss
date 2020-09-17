@@ -126,7 +126,7 @@
                 border: 2px solid rgb(69, 94, 27);
                 text-transform: uppercase;
                 font-weight: bold;
-                font-size: 1.1em;
+                font-size: 1.05em;
                 color:rgb(45, 56, 26);
                 cursor: pointer;
                 padding: 0.4em 0.8em 0.4em 0.8em;
@@ -136,7 +136,12 @@
             }
 
             button:focus {
+                border: 2px solid rgb(45, 56, 26);
+            }
 
+            button:hover {
+                background-color: rgb(69, 94, 27);
+                color: white;
             }
 
         }
