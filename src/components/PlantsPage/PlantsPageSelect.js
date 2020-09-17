@@ -2,7 +2,7 @@ import React from 'react'
 
 const PlantsPageSelect = ({ currentPage, changeCurrentPage, totalPages }) => {
     return (
-        <div plants__page-buttons>
+        <div className="plants__container__buttons">
             <button
                 style={{display: (currentPage===1) ? 'none' : 'inline'}}
                 onClick={()=>changeCurrentPage(currentPage - 1)}>

@@ -120,5 +120,25 @@
                 }
             }
         }
+        &__buttons {
+            margin-bottom: 1em;
+            button {
+                border: 2px solid rgb(69, 94, 27);
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.1em;
+                color:rgb(45, 56, 26);
+                cursor: pointer;
+                padding: 0.4em 0.8em 0.4em 0.8em;
+                margin: 0.5em;
+                background: none;
+                outline: none;
+            }
+
+            button:focus {
+
+            }
+
+        }
     }
 }
