@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ImageNotFound from '../../assets/image-not-found.jpg'
 
 const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug}) => {
@@ -7,15 +7,24 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug}) => {
         backgroundImage: (imgUrl!==null) ? `url(${imgUrl})` : `url(${ImageNotFound})`
     }
 
+    const checkText = (text) => {
+        if(text === null) {
+            text = scientificName
+        } else if(scientificName === null) {
+            text = "Not Found"
+        }
+        return text
+    }
+
     const test = () => { console.log(imgUrl)}
     return (
-        <div className="plants__container__content__plant" onClick={()=>test()}>
+        <div className="plants__container__content__plant">
             <div
                 className="plants__container__content__plant__image"
                 style={imgStyle}
             />
             <div className="plants__container__content__plant__information">
-                <p className="plants__container__content__plant__information__text">{commonName}</p>
+                <p className="plants__container__content__plant__information__text">{commonName = checkText(commonName)}</p>
                 <p className="plants__container__content__plant__information__text">Common Name</p>
                 <hr className="plants__container__content__plant__information__divider"></hr>
                 <p className="plants__container__content__plant__information__text">{scientificName}</p>
