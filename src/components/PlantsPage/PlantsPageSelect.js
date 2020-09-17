@@ -4,11 +4,10 @@ const PlantsPageSelect = ({ currentPage, changeCurrentPage, totalPages }) => {
     return (
         <div className="plants__container__buttons">
             <button
-                style={{display: (currentPage===1) ? 'none' : 'inline'}}
-                onClick={()=>changeCurrentPage(currentPage - 1)}>
-                Previous
+                style={{display: (currentPage === 1) ? 'none' : 'inline'}}
+                onClick={()=>changeCurrentPage(1)}>
+                First
             </button>
-            <button onClick={()=>changeCurrentPage(1)}>First</button>
             <button
                 onClick={()=>changeCurrentPage(currentPage)}>
                 { currentPage }
@@ -23,11 +22,10 @@ const PlantsPageSelect = ({ currentPage, changeCurrentPage, totalPages }) => {
                 onClick={()=>changeCurrentPage(currentPage + 2)}>
                 { currentPage + 2}
             </button>
-            <button onClick={()=>changeCurrentPage(totalPages)}>Last</button>
             <button
-                style={{display: (currentPage===totalPages) ? 'none' : 'inline'}}
-                onClick={()=>changeCurrentPage(currentPage + 1)}>
-                Next
+                style={{display: (currentPage === totalPages) ? 'none' : 'inline'}}
+                onClick={()=>changeCurrentPage(totalPages)}>
+                Last
             </button>
         </div>
     )
