@@ -45,7 +45,7 @@ const PlantsContainer = () => {
                 <PlantsHeader />
                 <div className="plants__container">
                     <PlantsForm />
-                    <div className="plants__container__content">
+                    <div className="plants__container__items">
                         {
                             (!isLoading) ?
                                 data.data.map((data, key) => {
@@ -58,6 +58,8 @@ const PlantsContainer = () => {
                                             slug={data.slug}
                                             genus={data.genus}
                                             family={data.family}
+                                            synonyms={data.synonyms}
+                                            author={data.author}
                                         />
                                     )
                             })  : <p>LOADING</p>

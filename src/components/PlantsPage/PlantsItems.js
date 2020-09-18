@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ImageNotFound from '../../assets/image-not-found.jpg'
 
-const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family }) => {
+const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family, synonyms, author }) => {
 
     const imgStyle = {
         backgroundImage: (imgUrl!==null) ? `url(${imgUrl})` : `url(${ImageNotFound})`
@@ -22,9 +22,9 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family }
 
     const test = () => { console.log(imgUrl)}
     return (
-        <div className="plants__container__content__plant">
+        <div className="plants__container__items__item">
             <div
-                className="plants__container__content__plant__image"
+                className="plants__container__items__item__image"
                 style={imgStyle}
             />
             {/*
@@ -41,9 +41,14 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family }
                 <p className="plants__container__content__plant__information__text">{slug}</p>
                 <p className="plants__container__content__plant__information__text">Slug</p>
             </div> */}
-            <div className="plants__container__content__plant__information">
-                <h3>{firstUpper(scientificName)}</h3>
-                <p>Also called {firstUpper(commonName)}. Is a spiecies of the <span>{family}</span> family</p>
+            <div className="plants__container__items__item__content">
+                <h3 className="plants__container__items__item__content__name">{firstUpper(scientificName)}</h3>
+                <p className="plants__container__items__item__content__info">Also called {firstUpper(commonName)}.
+                    Is a spiecies of the
+                    <span>{family}</span> family
+                </p>
+                <p>synonyms: {synonyms[0]}, {synonyms[1]} or {synonyms[2]} (...{synonyms.length})</p>
+                <p>[author: {author}]</p>
             </div>
         </div>
     )
