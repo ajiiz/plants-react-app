@@ -23,7 +23,7 @@ const PlantsContainer = () => {
             .then(json => {
                 setData(json)
                 let n = json.links.last
-                n = n.substring(20)
+                n = n.substring(21)
                 setTotalPages(n)
             })
             .then(()=>setIsLoading(false))
