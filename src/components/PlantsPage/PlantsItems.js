@@ -39,21 +39,25 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, family, synonyms, aut
                         {checkName(scientificName)}
                     </h3>
                     <p className="plants__container__items__item__content__wrapper__info">
-                        Also called {checkName(commonName)}.
-                        It is a spiecies of the
+                        Also called
+                            <span className="plants__container__items__item__content__wrapper__info__commonname">
+                                {" "+checkName(commonName)}.
+                            </span>
+                        <p>It is a spiecies of the
                         <span className="plants__container__items__item__content__wrapper__info__family">
-                            {" "+family}</span> family.
-                    </p>
-                    <p className="plants__container__items__item__content__wrapper__synonyms">
-                        synonyms
-                        <span className="plants__container__items__item__content__wrapper__synonyms__length">
-                            {(synonyms.length !== 0) ? "("+synonyms.length+")" : null}
-                        </span>:
-                        {" "+lowestLengthSyn(synonyms)}
+                            {" "+family}
+                            </span> family.</p>
+                        <p className="plants__container__items__item__content__wrapper__info__synonyms">
+                            synonym
+                            <span className="plants__container__items__item__content__wrapper__info_synonyms__length">
+                                {(synonyms.length !== 0) ? "("+synonyms.length+")" : null}
+                            </span>:
+                            {" "+lowestLengthSyn(synonyms)}
 
-                    </p>
-                    <p className="plants__container__items__item__content__wrapper__author">
-                        [author: {author}]
+                        </p>
+                        <p className="plants__container__items__item__content__wrapper__info__author">
+                            [author: {author}]
+                        </p>
                     </p>
                 </div>
             </div>
