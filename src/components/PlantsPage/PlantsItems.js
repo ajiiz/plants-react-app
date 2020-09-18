@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ImageNotFound from '../../assets/image-not-found.jpg'
 
-const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug}) => {
+const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family }) => {
 
     const imgStyle = {
         backgroundImage: (imgUrl!==null) ? `url(${imgUrl})` : `url(${ImageNotFound})`
@@ -43,7 +43,7 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug}) => {
             </div> */}
             <div className="plants__container__content__plant__information">
                 <h3>{firstUpper(scientificName)}</h3>
-                <p>Also called {firstUpper(commonName)}. Is a spiecies of the </p>
+                <p>Also called {firstUpper(commonName)}. Is a spiecies of the <span>{family}</span> family</p>
             </div>
         </div>
     )

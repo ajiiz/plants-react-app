@@ -57,6 +57,7 @@ const PlantsContainer = () => {
                                             scientificName={data.scientific_name}
                                             slug={data.slug}
                                             genus={data.genus}
+                                            family={data.family}
                                         />
                                     )
                             })  : <p>LOADING</p>
