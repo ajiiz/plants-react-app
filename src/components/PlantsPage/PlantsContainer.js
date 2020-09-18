@@ -13,7 +13,7 @@ const PlantsContainer = () => {
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
-        URL: `/api/v1/plants?`
+        URL: `/api/v1/species?`
     }
 
     useEffect(() => {
