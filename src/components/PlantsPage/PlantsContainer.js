@@ -55,8 +55,6 @@ const PlantsContainer = () => {
                                             commonName={data.common_name}
                                             imgUrl={data.image_url}
                                             scientificName={data.scientific_name}
-                                            slug={data.slug}
-                                            genus={data.genus}
                                             family={data.family}
                                             synonyms={data.synonyms}
                                             author={data.author}

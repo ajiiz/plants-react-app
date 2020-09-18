@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ImageNotFound from '../../assets/image-not-found.jpg'
 
-const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family, synonyms, author }) => {
+const PlantsItems = ({ commonName, imgUrl, scientificName, family, synonyms, author }) => {
 
     const imgStyle = {
         backgroundImage: (imgUrl!==null) ? `url(${imgUrl})` : `url(${ImageNotFound})`
@@ -49,18 +49,25 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family, 
                 <p className="plants__container__content__plant__information__text">Slug</p>
             </div> */}
             <div className="plants__container__items__item__content">
-                <h3 className="plants__container__items__item__content__name">{firstUpper(scientificName)}</h3>
-                <p className="plants__container__items__item__content__info">Also called {firstUpper(commonName)}.
-                    Is a spiecies of the
-                    <span className="plants__container__items__item__content__info__family">
-                        {family}</span> family.
-                </p>
-                <p className="plants__container__items__item__content__synonyms">
-                    synonyms: {lowestLength(synonyms)}, ... <span>({synonyms.length})</span>
-                </p>
-                <p className="plants__container__items__item__content__author">
-                    [author: {author}]
-                </p>
+                <div className="plants__container__items__item__content__wrapper">
+                    <h3 className="plants__container__items__item__content__wrapper__name">
+                        {firstUpper(scientificName)}
+                    </h3>
+                    <p className="plants__container__items__item__content__wrapper__info">Also called {firstUpper(commonName)}.
+                        Is a spiecies of the
+                        <span className="plants__container__items__item__content__wrapper__info__family">
+                            {family}</span> family.
+                    </p>
+                    <p className="plants__container__items__item__content__wrapper__synonyms">
+                        synonyms: {lowestLength(synonyms)}, ...
+                        <span className="plants__container__items__item__content__wrapper__synonyms__length">
+                            ({synonyms.length})
+                        </span>
+                    </p>
+                    <p className="plants__container__items__item__content__wrapper__author">
+                        [author: {author}]
+                    </p>
+                </div>
             </div>
         </div>
     )

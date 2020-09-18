@@ -51,7 +51,7 @@
     }
 
     &__container {
-        width: 90%;
+        width: 80%;
         min-height: 100vh;
         height: fit-content;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
@@ -69,24 +69,29 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
+
+            &__item:hover {
+                border: 2px solid rgb(69, 94, 27);
+            }
+
+            &__item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
 
             &__item {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 flex-direction: row;
-                justify-content: center;
                 align-items: center;
-                width: 50%;
+                width: 70%;
                 height: 40vh;
-                margin: 2em;
-
-                border: 2px solid rgb(69, 94, 27);
-                box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+                margin: 1em;
+               // box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 
                 &__image {
-                    height: 75%;
-                    width: 40%;
+                    height: 100%;
+                    width: 25%;
                     border-radius: 5px;
                     background-position: center;
                     background-size: cover;
@@ -99,23 +104,13 @@
                     width: 60%;
                     display: flex;
                     flex-direction: column;
-                    align-items: left;
+                    justify-content: center;
+                    align-items: center;
                     color:rgb(45, 56, 26);
-
-                    &__text:nth-of-type(even) {
-                        font-size: 0.6em;
-                        color:rgb(95, 128, 42);
-                        opacity: 0.9;
-                    }
-
-                    &__divider {
-                        border: 1px solid rgb(69, 94, 27);
-                        width:100%;
-                        margin: 0.1em 0em 0.1em 0em;
-                    }
                 }
             }
         }
+
         &__buttons {
             margin-bottom: 1em;
             button {
