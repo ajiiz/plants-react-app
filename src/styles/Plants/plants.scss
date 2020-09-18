@@ -99,9 +99,7 @@
                     width: 60%;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 1.1em;
+                    align-items: left;
                     color:rgb(45, 56, 26);
 
                     &__text:nth-of-type(even) {

@@ -20,7 +20,14 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family, 
         return text.charAt(0).toUpperCase() + text.slice(1)
     }
 
-    const test = () => { console.log(imgUrl)}
+    const lowestLength = (arr) => {
+        let minLen = arr[0].length
+        let syn = ""
+        arr.forEach(el => {
+            syn = (el.length < minLen) ? el : ""
+        });
+        return syn
+    }
     return (
         <div className="plants__container__items__item">
             <div
@@ -45,10 +52,15 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, genus, slug, family, 
                 <h3 className="plants__container__items__item__content__name">{firstUpper(scientificName)}</h3>
                 <p className="plants__container__items__item__content__info">Also called {firstUpper(commonName)}.
                     Is a spiecies of the
-                    <span>{family}</span> family
+                    <span className="plants__container__items__item__content__info__family">
+                        {family}</span> family.
                 </p>
-                <p>synonyms: {synonyms[0]}, {synonyms[1]} or {synonyms[2]} (...{synonyms.length})</p>
-                <p>[author: {author}]</p>
+                <p className="plants__container__items__item__content__synonyms">
+                    synonyms: {lowestLength(synonyms)}, ... <span>({synonyms.length})</span>
+                </p>
+                <p className="plants__container__items__item__content__author">
+                    [author: {author}]
+                </p>
             </div>
         </div>
     )
