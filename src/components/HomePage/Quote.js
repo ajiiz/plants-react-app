@@ -10,8 +10,8 @@ const Quote = () => {
     return (
         <div className="quotes">
             <div className="quotes__title">
-                <h3 className="text">green power</h3>
-                <hr className="divider"></hr>
+                <h3 className="quotes__title__text">green power</h3>
+                <hr className="quotes__title__divider"></hr>
             </div>
             <div className="quotes__items">
                 <QuoteItem

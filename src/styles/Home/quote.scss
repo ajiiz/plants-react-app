@@ -14,14 +14,14 @@
         align-items:center;
         flex-direction: column;
 
-        .text {
+        &__text {
             text-transform: uppercase;
             font-size: 1.5em;
             letter-spacing: 0.1em;
             color:rgb(69, 94, 27);
         }
 
-        .divider {
+        &__divider {
             margin-top: 0.1em;
             border: 2px solid rgba(75, 102, 28, 0.884);
             border-radius: 4px;
