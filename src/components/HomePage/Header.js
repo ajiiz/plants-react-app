@@ -4,10 +4,10 @@ import '../../styles/Home/header.scss'
 const Header = () => {
     return (
         <header>
-            <div className="wrapper">
-                <h1 className="title">plant<span>s</span>pot</h1>
-                <h3 className="subtitle">healthy breath</h3>
-                <hr className="divider"></hr>
+            <div className="container">
+                <h1 className="container__title">plant<span>s</span>pot</h1>
+                <h3 className="container__subtitle">healthy breath</h3>
+                <hr className="container__divider"></hr>
             </div>
         </header>
     )
