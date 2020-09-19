@@ -13,27 +13,27 @@
         background-position: center;
         background-size: cover;
     }
-    &__textcontainer{
+    &__container{
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .title {
+        &__title {
             text-transform: uppercase;
             font-size: 1.4em;
             letter-spacing: 0.1em;
             color:rgb(69, 94, 27);
         }
-        .divider {
+        &__divider {
             margin-top: 0.1em;
             border: 2px solid rgba(52, 71, 20, 0.74);
             border-radius: 4px;
             width: 10%;
             margin-bottom: 1em;
         }
-        .text {
+        &__text {
             width: 80%;
             font-size: 0.9em;
             color:rgb(45, 56, 26);
@@ -56,15 +56,15 @@
             height: 40%;
         }
 
-        &__textcontainer {
+        &__container {
             width: 100%;
             height: 60%;
 
-            .divider {
+            &__divider {
                 width: 25%;
             }
 
-            .text {
+            &__text {
                 width: 85%;
             }
         }

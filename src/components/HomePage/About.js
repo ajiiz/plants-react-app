@@ -5,10 +5,10 @@ const About = () => {
     return (
         <div className="about">
             <div className="about__imagewrapper"></div>
-            <div className="about__textcontainer">
-                <h3 className="title">master the green</h3>
-                <hr className="divider"></hr>
-                <div className="text"><p>
+            <div className="about__container">
+                <h3 className="about__container__title">master the green</h3>
+                <hr className="about__container__divider"></hr>
+                <div className="about__container__text"><p>
                 A wonderful serenity has taken possession
                 of my entire
                 soul, like these sweet mornings of
