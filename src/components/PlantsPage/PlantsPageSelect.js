@@ -23,7 +23,7 @@ const PlantsPageSelect = ({ currentPage, changeCurrentPage, totalPages }) => {
                 { currentPage + 2}
             </button>
             <button
-                style={{display: (currentPage === totalPages) ? 'none' : 'inline'}}
+                style={{display: ((currentPage === totalPages) && (totalPages !== 1)) ? 'none' : 'inline'}}
                 onClick={()=>changeCurrentPage(totalPages)}>
                 Last
             </button>

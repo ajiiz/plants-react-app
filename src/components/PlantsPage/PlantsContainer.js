@@ -24,7 +24,6 @@ const PlantsContainer = () => {
             .then(res => res.json())
             .then(json => {
                 setData(json)
-                console.log(json)
                 let linkLast = json.links.last
                 linkLast = linkLast.substring(28)
                 let maxPages = ''
@@ -32,14 +31,13 @@ const PlantsContainer = () => {
                     if(linkLast[i] !== '&') maxPages += linkLast[i]
                     else break
                 }
-                console.log(maxPages)
                 setTotalPages(maxPages)
             })
             .then(()=>setIsLoading(false))
     },[currentPage, query])
 
     useEffect(() => {
-        console.log(query)
+        setCurrentPage(1)
         if(searchValue === '') {
             setQuery('*')
         } else setQuery(searchValue)
@@ -55,13 +53,8 @@ const PlantsContainer = () => {
         setSearchValue(e.target.value)
     }
 
-    const test = () => {
-        console.log(totalPages)
-        console.log(data)
-    }
-
     return (
-            <div className="plants" onClick={()=>test()}>
+            <div className="plants">
                 <PlantsHeader />
                 <div className="plants__container">
                     <PlantsForm searchValue={searchValue} onSearchChange={onSearchChange} />
@@ -79,8 +72,8 @@ const PlantsContainer = () => {
                                             synonyms={data.synonyms}
                                             author={data.author}
                                         />
-                                    )
-                            })  : <p>LOADING</p>
+                                    )}
+                            )  : <p>LOADING</p>
                         }
                     </div>
                     <PlantsPageSelect
