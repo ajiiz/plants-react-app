@@ -38,7 +38,7 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, family, synonyms, aut
                     <h3 className="plants__container__items__item__content__wrapper__name">
                         {checkName(scientificName)}
                     </h3>
-                    <p className="plants__container__items__item__content__wrapper__info">
+                    <div className="plants__container__items__item__content__wrapper__info">
                         Also called
                             <span className="plants__container__items__item__content__wrapper__info__commonname">
                                 {" "+checkName(commonName)}.
@@ -58,7 +58,7 @@ const PlantsItems = ({ commonName, imgUrl, scientificName, family, synonyms, aut
                         <p className="plants__container__items__item__content__wrapper__info__author">
                             [author: {author}]
                         </p>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
