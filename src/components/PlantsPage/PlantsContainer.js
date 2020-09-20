@@ -11,15 +11,16 @@ const PlantsContainer = () => {
     const [totalPages, setTotalPages] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
     const [searchValue, setSearchValue] = useState('')
+    const [query, setQuery] = useState('*')
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
-        URL: `/api/v1/species?`
+        URL: '/api/v1/species/'
     }
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+`&page=${currentPage}`+"&token="+API.KEY)
+        fetch(API.URL+'search?q='+query+`&page=${currentPage}`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => {
                 setData(json)
@@ -28,10 +29,13 @@ const PlantsContainer = () => {
                 setTotalPages(n)
             })
             .then(()=>setIsLoading(false))
-    },[currentPage])
+    },[currentPage, query])
 
     useEffect(() => {
-        console.log(searchValue)
+        console.log(query)
+        if(searchValue === '') {
+            setQuery(searchValue)
+        } else setQuery('*')
     }, [searchValue])
 
     const changeCurrentPage = (n) => {
