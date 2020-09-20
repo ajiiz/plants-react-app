@@ -24,9 +24,16 @@ const PlantsContainer = () => {
             .then(res => res.json())
             .then(json => {
                 setData(json)
-                let n = json.links.last
-                n = n.substring(21)
-                setTotalPages(n)
+                console.log(json)
+                let linkLast = json.links.last
+                linkLast = linkLast.substring(28)
+                let maxPages = ''
+                for(let i = 0; i < linkLast.length; i++) {
+                    if(linkLast[i] !== '&') maxPages += linkLast[i]
+                    else break
+                }
+                console.log(maxPages)
+                setTotalPages(maxPages)
             })
             .then(()=>setIsLoading(false))
     },[currentPage, query])
@@ -34,8 +41,8 @@ const PlantsContainer = () => {
     useEffect(() => {
         console.log(query)
         if(searchValue === '') {
-            setQuery(searchValue)
-        } else setQuery('*')
+            setQuery('*')
+        } else setQuery(searchValue)
     }, [searchValue])
 
     const changeCurrentPage = (n) => {
