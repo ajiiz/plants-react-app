@@ -30,6 +30,10 @@ const PlantsContainer = () => {
             .then(()=>setIsLoading(false))
     },[currentPage])
 
+    useEffect(() => {
+        console.log(searchValue)
+    }, [searchValue])
+
     const changeCurrentPage = (n) => {
         if(n !== 0) {
             setCurrentPage(n)
