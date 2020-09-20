@@ -55,26 +55,28 @@ const PlantsContainer = () => {
     }
 
     return (
-            <div className="plants">
+            <div className="plants" onClick={()=>console.log(data)}>
                 <PlantsHeader />
                 <div className="plants__container">
                     <PlantsForm searchValue={searchValue} onSearchChange={onSearchChange} />
                     <div className="plants__container__items">
                         {
                             (!isLoading) ?
-                                data.data.map((data, key) => {
-                                    return(
-                                        <PlantsItems
-                                            key={key}
-                                            commonName={data.common_name}
-                                            imgUrl={data.image_url}
-                                            scientificName={data.scientific_name}
-                                            family={data.family}
-                                            synonyms={data.synonyms}
-                                            author={data.author}
-                                        />
-                                    )}
-                            )  : <LoadingSpinner />
+                                (data.meta.total > 0) ?
+                                    data.data.map((data, key) => {
+                                        return(
+                                            <PlantsItems
+                                                key={key}
+                                                commonName={data.common_name}
+                                                imgUrl={data.image_url}
+                                                scientificName={data.scientific_name}
+                                                family={data.family}
+                                                synonyms={data.synonyms}
+                                                author={data.author}
+                                            />
+                                        )})
+                                :   <p className="plants__container__items__error">ITEMS NOT FOUND</p>
+                            :  <LoadingSpinner />
                         }
                     </div>
                     <PlantsPageSelect
