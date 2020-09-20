@@ -3,6 +3,7 @@ import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
 import PlantsForm from './PlantsForm'
 import PlantsPageSelect from './PlantsPageSelect'
+import LoadingSpinner from './LoadingSpinner'
 import "../../styles/Plants/plants.scss"
 
 const PlantsContainer = () => {
@@ -73,7 +74,7 @@ const PlantsContainer = () => {
                                             author={data.author}
                                         />
                                     )}
-                            )  : <p>LOADING</p>
+                            )  : <LoadingSpinner />
                         }
                     </div>
                     <PlantsPageSelect
