@@ -10,6 +10,7 @@ const PlantsContainer = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [totalPages, setTotalPages] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
+    const [searchText, setSearchText] = useState('')
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
