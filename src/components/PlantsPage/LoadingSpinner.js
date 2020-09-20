@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoadingSpinner = () => {
     return (
-        <div>
+        <div className="plants__container__items__spinner">
             LOADING
         </div>
     )

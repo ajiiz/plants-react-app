@@ -52,7 +52,6 @@
 
     &__container {
         width: 80%;
-        min-height: 200vh;
         height: fit-content;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
         background-color: rgb(255, 255, 255);
@@ -60,7 +59,6 @@
         margin-bottom: -8vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
 
         &__items {
@@ -150,6 +148,10 @@
                         }
                     }
                 }
+            }
+
+            &__spinner {
+                min-height: 70vh;
             }
         }
 
