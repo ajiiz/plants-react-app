@@ -1,9 +1,17 @@
 import React from 'react'
 
-const PlantsForm = () => {
+const PlantsForm = ({ onSearchChange, searchValue}) => {
     return (
-        <div>
-            FORM
+        <div className="plants__container__form">
+            <form>
+                Search
+                <input
+                    type="text"
+                    name="search box"
+                    value={searchValue}
+                    onChange={(e) => onSearchChange(e)}
+                />
+            </form>
         </div>
     )
 }

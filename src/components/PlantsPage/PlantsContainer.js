@@ -10,7 +10,7 @@ const PlantsContainer = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [totalPages, setTotalPages] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
-    const [searchText, setSearchText] = useState('')
+    const [searchValue, setSearchValue] = useState('')
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -36,6 +36,10 @@ const PlantsContainer = () => {
         }
     }
 
+    const onSearchChange = (e) => {
+        setSearchValue(e.target.value)
+    }
+
     const test = () => {
         console.log(totalPages)
         console.log(data)
@@ -45,7 +49,7 @@ const PlantsContainer = () => {
             <div className="plants" onClick={()=>test()}>
                 <PlantsHeader />
                 <div className="plants__container">
-                    <PlantsForm />
+                    <PlantsForm searchValue={searchValue} onSearchChange={onSearchChange} />
                     <div className="plants__container__items">
                         {
                             (!isLoading) ?
