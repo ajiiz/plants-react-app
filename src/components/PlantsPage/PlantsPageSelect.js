@@ -4,7 +4,7 @@ const PlantsPageSelect = ({ currentPage, changeCurrentPage, totalPages }) => {
     return (
         <div className="plants__container__buttons">
             <button
-                style={{display: (currentPage === 1) ? 'none' : 'inline'}}
+                style={{display: ((currentPage === 1) || (totalPages === 1)) ? 'none' : 'inline'}}
                 onClick={()=>changeCurrentPage(1)}>
                 First
             </button>
@@ -28,8 +28,8 @@ const PlantsPageSelect = ({ currentPage, changeCurrentPage, totalPages }) => {
                 { currentPage + 2}
             </button>
             <button
-                style={{display: ((currentPage === totalPages) && (totalPages !== 1)) ? 'none' : 'inline'}}
-                onClick={()=>changeCurrentPage(totalPages)}>
+                style={{display: (currentPage === Number(totalPages)) ? 'none' : 'inline'}}
+                onClick={()=>changeCurrentPage(Number(totalPages))}>
                 Last
             </button>
         </div>
