@@ -22,7 +22,7 @@ const PlantsContainer = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+'search?q='+query+`&page=${currentPage}`+"&token="+API.KEY)
+        fetch(API.URL+'search?q='+query+'&filter%5Bflower_color%5D=red,yellow'+`&page=${currentPage}`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => {
                 setData(json)
@@ -43,7 +43,7 @@ const PlantsContainer = () => {
     const getTotalPages = (linkLast) => {
         console.log(linkLast)
         let maxPages = ""
-        for(let i = linkLast.search(/page=/i) + 5; i < linkLast.length; i++) {
+        for(let i = linkLast.search("page=") + 5; i < linkLast.length; i++) {
             //loop that starts after word 'page' in link and ends when  whole number with all pages is found
             if(linkLast[i] >= 0 && linkLast[i] < 10) maxPages += linkLast[i]
             else break

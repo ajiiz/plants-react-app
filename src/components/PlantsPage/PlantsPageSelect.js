@@ -9,6 +9,11 @@ const PlantsPageSelect = ({ currentPage, changeCurrentPage, totalPages }) => {
                 First
             </button>
             <button
+                style={{display: (currentPage === 1) ? 'none' : 'inline'}}
+                onClick={()=>changeCurrentPage(currentPage - 1)}>
+                BACK
+            </button>
+            <button
                 onClick={()=>changeCurrentPage(currentPage)}>
                 { currentPage }
             </button>
