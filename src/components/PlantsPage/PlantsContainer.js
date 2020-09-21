@@ -13,6 +13,7 @@ const PlantsContainer = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [searchValue, setSearchValue] = useState('')
     const [query, setQuery] = useState('*')
+    const [color, setColor] = useState('')
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,

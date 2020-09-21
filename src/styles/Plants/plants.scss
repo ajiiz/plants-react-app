@@ -61,6 +61,10 @@
         flex-direction: column;
         align-items: center;
 
+        &__form {
+            height: 20vh;
+        }
+
         &__items {
             width: 100%;
             height: 100%;
@@ -88,7 +92,7 @@
                 flex-direction: row;
                 align-items: center;
                 width: 60%;
-                height: 40vh;
+                height: 38vh;
                 margin: 1em;
                 padding: 2px;
                // box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
