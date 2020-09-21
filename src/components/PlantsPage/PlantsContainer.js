@@ -27,12 +27,7 @@ const PlantsContainer = () => {
             .then(json => {
                 setData(json)
                 let linkLast = json.links.last
-                linkLast = linkLast.substring(28)
-                let maxPages = ''
-                for(let i = 0; i < linkLast.length; i++) {
-                    if(linkLast[i] !== '&') maxPages += linkLast[i]
-                    else break
-                }
+                let maxPages = getTotalPages(linkLast)
                 setTotalPages(maxPages)
             })
             .then(()=>setIsLoading(false))
@@ -44,6 +39,16 @@ const PlantsContainer = () => {
             setQuery('*')
         } else setQuery(searchValue)
     }, [searchValue])
+
+    const getTotalPages = (linkLast) => {
+        let maxPages = ""
+        for(let i = linkLast.search(/page/i) + 5; i < linkLast.length; i++) {
+            //loop that starts after word 'page' in link and ends when  whole number with all pages is found
+            if(linkLast[i] >= 0 && linkLast[i] < 10) maxPages += linkLast[i]
+            else break
+        }
+        return maxPages
+    }
 
     const changeCurrentPage = (n) => {
         if(n !== 0) {
