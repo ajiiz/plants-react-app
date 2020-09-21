@@ -41,8 +41,9 @@ const PlantsContainer = () => {
     }, [searchValue])
 
     const getTotalPages = (linkLast) => {
+        console.log(linkLast)
         let maxPages = ""
-        for(let i = linkLast.search(/page/i) + 5; i < linkLast.length; i++) {
+        for(let i = linkLast.search(/page=/i) + 5; i < linkLast.length; i++) {
             //loop that starts after word 'page' in link and ends when  whole number with all pages is found
             if(linkLast[i] >= 0 && linkLast[i] < 10) maxPages += linkLast[i]
             else break
