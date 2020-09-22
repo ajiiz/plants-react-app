@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PlantsForm = ({ onSearchChange, searchValue}) => {
+const PlantsForm = ({ onSearchChange, searchValue, color}) => {
     return (
         <div className="plants__container__form">
             <form>
@@ -11,7 +11,7 @@ const PlantsForm = ({ onSearchChange, searchValue}) => {
                     value={searchValue}
                     onChange={(e) => onSearchChange(e)}
                 />
-                <select name="colors">
+                <select name="color" onChange={(e) => onSearchChange(e)}>
                     <option value=""></option>
                     <option value="red">red</option>
                 </select>

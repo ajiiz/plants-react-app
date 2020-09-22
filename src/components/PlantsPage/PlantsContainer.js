@@ -65,7 +65,11 @@ const PlantsContainer = () => {
             <div className="plants" onClick={()=>console.log(data)}>
                 <PlantsHeader />
                 <div className="plants__container">
-                    <PlantsForm searchValue={searchValue} onSearchChange={onSearchChange} />
+                    <PlantsForm
+                        searchValue={searchValue}
+                        onSearchChange={onSearchChange}
+                        color={color}
+                        />
                     <div className="plants__container__items">
                         {
                             (!isLoading) ?
