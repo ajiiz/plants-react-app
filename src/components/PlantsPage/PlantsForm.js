@@ -1,4 +1,5 @@
 import React from 'react'
+import ColorNames from '../../assets/colors.json'
 
 const PlantsForm = ({ onSearchChange, searchValue, color}) => {
     return (
@@ -13,7 +14,10 @@ const PlantsForm = ({ onSearchChange, searchValue, color}) => {
                 />
                 <select name="color" onChange={(e) => onSearchChange(e)}>
                     <option value=""></option>
-                    <option value="red">red</option>
+                    {ColorNames.colors.map((color, key) => {
+                        return <option key={key} value={color}>{color}</option>
+                    }
+                    )}
                 </select>
             </form>
         </div>
