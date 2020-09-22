@@ -11,6 +11,10 @@ const PlantsForm = ({ onSearchChange, searchValue}) => {
                     value={searchValue}
                     onChange={(e) => onSearchChange(e)}
                 />
+                <select name="colors">
+                    <option value=""></option>
+                    <option value="red">red</option>
+                </select>
             </form>
         </div>
     )
