@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+
 import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
 import PlantsForm from './PlantsForm'
@@ -14,6 +15,7 @@ const PlantsContainer = () => {
     const [searchValue, setSearchValue] = useState('')
     const [query, setQuery] = useState('*')
     const [color, setColor] = useState('')
+    const [isColorChecked, setIsColorChecked] = useState(false)
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -69,6 +71,7 @@ const PlantsContainer = () => {
                         searchValue={searchValue}
                         onSearchChange={onSearchChange}
                         color={color}
+                        isColorChecked={isColorChecked}
                         />
                     <div className="plants__container__items">
                         {
