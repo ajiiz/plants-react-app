@@ -1,7 +1,7 @@
 import React from 'react'
 import ColorNames from '../../assets/colors.json'
 
-const PlantsForm = ({ onSearchChange, searchValue, color, isColorChecked}) => {
+const PlantsForm = ({ onSearchChange, searchValue, color, isColorChecked, onIsColorCheckedChange }) => {
     return (
         <div className="plants__container__form">
             <form>
@@ -14,20 +14,13 @@ const PlantsForm = ({ onSearchChange, searchValue, color, isColorChecked}) => {
                         onChange={(e) => onSearchChange(e)}
                     />
                 </label>
-                {/*
-                <select name="color" onChange={(e) => onSearchChange(e)}>
-                    <option value=""></option>
-                    {ColorNames.colors.map((color, key) => {
-                        return <option key={key} value={color}>{color}</option>
-                    }
-                    )}
-                </select> */}
                 <label>
                     Search for color?
                     <input
                         type="checkbox"
                         name="isColorChecked"
-
+                        value={isColorChecked}
+                        onChange={() => onIsColorCheckedChange()}
                     />
                 </label>
                 {

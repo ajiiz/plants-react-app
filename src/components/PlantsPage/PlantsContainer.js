@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import { useForm } from 'react-hook-form'
 import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
 import PlantsForm from './PlantsForm'
@@ -16,6 +16,7 @@ const PlantsContainer = () => {
     const [query, setQuery] = useState('*')
     const [color, setColor] = useState('')
     const [isColorChecked, setIsColorChecked] = useState(false)
+    const { register, setValue } = useForm()
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -63,6 +64,11 @@ const PlantsContainer = () => {
         setSearchValue(e.target.value)
     }
 
+    const onIsColorCheckedChange = () => {
+        setIsColorChecked(!isColorChecked)
+
+    }
+
     return (
             <div className="plants" onClick={()=>console.log(data)}>
                 <PlantsHeader />
@@ -72,6 +78,7 @@ const PlantsContainer = () => {
                         onSearchChange={onSearchChange}
                         color={color}
                         isColorChecked={isColorChecked}
+                        onIsColorCheckedChange={onIsColorCheckedChange}
                         />
                     <div className="plants__container__items">
                         {
