@@ -5,20 +5,37 @@ const PlantsForm = ({ onSearchChange, searchValue, color}) => {
     return (
         <div className="plants__container__form">
             <form>
-                Search
-                <input
-                    type="text"
-                    name="search box"
-                    value={searchValue}
-                    onChange={(e) => onSearchChange(e)}
-                />
+                <label>
+                    Search
+                    <input
+                        type="text"
+                        name="searchBox"
+                        value={searchValue}
+                        onChange={(e) => onSearchChange(e)}
+                    />
+                </label>
+                {/*
                 <select name="color" onChange={(e) => onSearchChange(e)}>
                     <option value=""></option>
                     {ColorNames.colors.map((color, key) => {
                         return <option key={key} value={color}>{color}</option>
                     }
                     )}
-                </select>
+                </select> */}
+                <label>
+                    Search for color?
+                    <input
+                        type="checkbox"
+                        name="isColorChecked"
+                    />
+                </label>
+                <label>
+                    Select for color
+                    <input
+                        type="color"
+                        name="color"
+                    />
+                </label>
             </form>
         </div>
     )
