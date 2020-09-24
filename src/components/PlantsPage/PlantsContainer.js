@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import useForm from '../../hooks/useForm'
 import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
 import PlantsForm from './PlantsForm'
@@ -12,11 +13,7 @@ const PlantsContainer = () => {
     const [totalPages, setTotalPages] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
     const [query, setQuery] = useState('*')
-    const [values, setValues] = useState({
-        color: '#ff0000',
-        searchValue: '',
-        isColorChecked: false
-    })
+    const { values, handleChange } = useForm()
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -29,6 +26,7 @@ const PlantsContainer = () => {
             .then(res => res.json())
             .then(json => {
                 setData(json)
+                console.log(json)
                 let linkLast = json.links.last
                 let maxPages = getTotalPages(linkLast)
                 setTotalPages(maxPages)
@@ -42,6 +40,10 @@ const PlantsContainer = () => {
             setQuery('*')
         } else setQuery(values.searchValue)
     }, [values.searchValue])
+
+    useEffect(() => {
+        console.log(values.color)
+    })
 
     const getTotalPages = (linkLast) => {
         console.log(linkLast)
@@ -57,22 +59,6 @@ const PlantsContainer = () => {
     const changeCurrentPage = (n) => {
         if(n !== 0) {
             setCurrentPage(n)
-        }
-    }
-
-    const handleChange = (event) => {
-        const { name, value, checked, type } = event.target
-        let checked2 = event.target.checked
-        if(type === "checkbox") {
-            setValues({
-                ...values,
-                [name]: checked2
-            })
-        } else {
-            setValues({
-                ...values,
-                [name]: value
-            })
         }
     }
 
