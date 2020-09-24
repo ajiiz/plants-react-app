@@ -1,7 +1,6 @@
 import React from 'react'
-import ColorNames from '../../assets/colors.json'
 
-const PlantsForm = ({ onSearchChange, searchValue, color, isColorChecked, onIsColorCheckedChange }) => {
+const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
     return (
         <div className="plants__container__form">
             <form>
@@ -9,20 +8,22 @@ const PlantsForm = ({ onSearchChange, searchValue, color, isColorChecked, onIsCo
                     Search
                     <input
                         type="text"
-                        name="searchBox"
+                        name="searchValue"
                         value={searchValue}
-                        onChange={(e) => onSearchChange(e)}
+                        onChange={(e) => handleChange(e)}
                     />
                 </label>
+                <br />
                 <label>
                     Search for color?
                     <input
                         type="checkbox"
                         name="isColorChecked"
                         value={isColorChecked}
-                        onChange={() => onIsColorCheckedChange()}
+                        checked={isColorChecked}
+                        onChange={(e) => handleChange(e)}
                     />
-                </label>
+                </label><br />
                 {
                     isColorChecked &&
                         <label>
@@ -30,6 +31,8 @@ const PlantsForm = ({ onSearchChange, searchValue, color, isColorChecked, onIsCo
                             <input
                                 type="color"
                                 name="color"
+                                value={color}
+                                onChange={(e) => handleChange(e)}
                             />
                         </label>
                 }

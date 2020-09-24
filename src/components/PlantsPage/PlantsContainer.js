@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { useForm } from 'react-hook-form'
 import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
 import PlantsForm from './PlantsForm'
@@ -12,11 +11,12 @@ const PlantsContainer = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [totalPages, setTotalPages] = useState(0)
     const [isLoading, setIsLoading] = useState(true)
-    const [searchValue, setSearchValue] = useState('')
     const [query, setQuery] = useState('*')
-    const [color, setColor] = useState('')
-    const [isColorChecked, setIsColorChecked] = useState(false)
-    const { register, setValue } = useForm()
+    const [values, setValues] = useState({
+        color: '#ff0000',
+        searchValue: '',
+        isColorChecked: false
+    })
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -38,10 +38,10 @@ const PlantsContainer = () => {
 
     useEffect(() => {
         setCurrentPage(1)
-        if(searchValue === '') {
+        if(values.searchValue === '') {
             setQuery('*')
-        } else setQuery(searchValue)
-    }, [searchValue])
+        } else setQuery(values.searchValue)
+    }, [values.searchValue])
 
     const getTotalPages = (linkLast) => {
         console.log(linkLast)
@@ -60,13 +60,20 @@ const PlantsContainer = () => {
         }
     }
 
-    const onSearchChange = (e) => {
-        setSearchValue(e.target.value)
-    }
-
-    const onIsColorCheckedChange = () => {
-        setIsColorChecked(!isColorChecked)
-
+    const handleChange = (event) => {
+        const { name, value, checked, type } = event.target
+        let checked2 = event.target.checked
+        if(type === "checkbox") {
+            setValues({
+                ...values,
+                [name]: checked2
+            })
+        } else {
+            setValues({
+                ...values,
+                [name]: value
+            })
+        }
     }
 
     return (
@@ -74,11 +81,10 @@ const PlantsContainer = () => {
                 <PlantsHeader />
                 <div className="plants__container">
                     <PlantsForm
-                        searchValue={searchValue}
-                        onSearchChange={onSearchChange}
-                        color={color}
-                        isColorChecked={isColorChecked}
-                        onIsColorCheckedChange={onIsColorCheckedChange}
+                        searchValue={values.searchValue}
+                        color={values.color}
+                        isColorChecked={values.isColorChecked}
+                        handleChange={handleChange}
                         />
                     <div className="plants__container__items">
                         {
