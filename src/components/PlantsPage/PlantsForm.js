@@ -1,5 +1,4 @@
 import React from 'react'
-import colorNames from '../../assets/colorNames.json'
 
 const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
 
@@ -8,7 +7,7 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
     }
 
     return (
-        <div className="plants__container__form" onClick={checkColor}>
+        <div className="plants__container__form">
             <form>
                 <label>
                     Search
