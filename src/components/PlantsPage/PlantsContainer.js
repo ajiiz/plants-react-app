@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import useForm from '../../hooks/useForm'
-import { formatHex, useNameThatColor } from 'react-ntc'
 import PlantsItems from './PlantsItems'
 import PlantsHeader from './PlantsHeader'
 import PlantsForm from './PlantsForm'
@@ -15,7 +14,6 @@ const PlantsContainer = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [query, setQuery] = useState('*')
     const { values, handleChange } = useForm()
-    const { colorr } = useNameThatColor(values.color)
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -44,7 +42,7 @@ const PlantsContainer = () => {
     }, [values.searchValue])
 
     useEffect(() => {
-        console.log(formatHex(values.color))
+        console.log("color changed")
     }, [values.color])
 
     const getTotalPages = (linkLast) => {
@@ -65,7 +63,7 @@ const PlantsContainer = () => {
     }
 
     return (
-            <div className="plants" onClick={()=>console.log(data)}>
+            <div className="plants" onClick={()=>console.log()}>
                 <PlantsHeader />
                 <div className="plants__container">
                     <PlantsForm

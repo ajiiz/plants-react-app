@@ -29,7 +29,7 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
                         <label>
                             Select for color
                             <input
-                                type="color"
+                                type="text"
                                 name="color"
                                 value={color}
                                 onChange={(e) => handleChange(e)}

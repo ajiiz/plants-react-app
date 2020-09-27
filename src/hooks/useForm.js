@@ -3,7 +3,7 @@ import { useState } from 'react'
 const useForm = () => {
 
     const [values, setValues] = useState({
-        color: '#ff0000',
+        color: 'red',
         searchValue: '',
         isColorChecked: false
     })
