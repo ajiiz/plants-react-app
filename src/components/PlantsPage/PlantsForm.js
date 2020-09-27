@@ -1,8 +1,14 @@
 import React from 'react'
+import colorNames from '../../assets/colorNames.json'
 
 const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
+
+    const checkColor = () => {
+        console.log(colorNames)
+    }
+
     return (
-        <div className="plants__container__form">
+        <div className="plants__container__form" onClick={checkColor}>
             <form>
                 <label>
                     Search
