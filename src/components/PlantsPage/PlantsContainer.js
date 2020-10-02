@@ -43,6 +43,7 @@ const PlantsContainer = () => {
     }, [values.searchValue])
 
     useEffect(() => {
+        setCurrentPage(1)
         if(values.color !== '' && values.isColorChecked === true) {
             setColorQuery('&filter%5Bflower_color%5D='+values.color)
         } else if(values.isColorChecked === false){
