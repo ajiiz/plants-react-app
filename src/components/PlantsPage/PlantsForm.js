@@ -5,18 +5,16 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
     return (
         <div className="plants__container__form">
             <form>
-                <label>
-                    Search by plant name
+                    <span className="plants__container__form__inputtext">Search by plant name</span>
                     <input
                         type="text"
                         name="searchValue"
                         value={searchValue}
                         onChange={(e) => handleChange(e)}
                     />
-                </label>
-                <br />
+                    <p className="plants__container__form__undertext">type search value</p>
                 <label>
-                    Color
+                    <span className="plants__container__form__inputtext">Include your color?</span>
                     <input
                         type="checkbox"
                         name="isColorChecked"
@@ -24,18 +22,19 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
                         checked={isColorChecked}
                         onChange={(e) => handleChange(e)}
                     />
-                </label><br />
+                </label>
                 {
                     isColorChecked &&
-                        <label>
-                            Select for color
+                        <>
+                            <span className="plants__container__form__inputtext">Search by color</span>
                             <input
                                 type="text"
                                 name="color"
                                 value={color}
                                 onChange={(e) => handleChange(e)}
                             />
-                        </label>
+                            <p className="plants__container__form__undertext">type color value</p>
+                        </>
                 }
             </form>
         </div>
