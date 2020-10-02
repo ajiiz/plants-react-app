@@ -2,15 +2,11 @@ import React from 'react'
 
 const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
 
-    const checkColor = () => {
-        console.log(colorNames)
-    }
-
     return (
         <div className="plants__container__form">
             <form>
                 <label>
-                    Search
+                    Search by plant name
                     <input
                         type="text"
                         name="searchValue"
@@ -20,7 +16,7 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
                 </label>
                 <br />
                 <label>
-                    Search for color?
+                    Color
                     <input
                         type="checkbox"
                         name="isColorChecked"
