@@ -14,7 +14,7 @@ const PlantsContainer = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [query, setQuery] = useState('*')
     const { values, handleChange } = useForm()
-    const [colorQuery, setColorQuery] = useState('&filter%5Bflower_color%5D='+values.color)
+    const [colorQuery, setColorQuery] = useState('')
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
@@ -23,7 +23,7 @@ const PlantsContainer = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+'search?q='+query+`&page=${currentPage}`+"&token="+API.KEY)
+        fetch(API.URL+'search?q='+query+colorQuery+`&page=${currentPage}`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => {
                 setData(json)
@@ -33,7 +33,7 @@ const PlantsContainer = () => {
                 setTotalPages(maxPages)
             })
             .then(()=>setIsLoading(false))
-    },[currentPage, query])
+    },[currentPage, query, colorQuery])
 
     useEffect(() => {
         setCurrentPage(1)
@@ -43,12 +43,12 @@ const PlantsContainer = () => {
     }, [values.searchValue])
 
     useEffect(() => {
-        console.log("color changed")
-    }, [values.color])
-
-    useEffect(() => {
-
-    }, [values.isColorChecked])
+        if(values.color !== '' && values.isColorChecked === true) {
+            setColorQuery('&filter%5Bflower_color%5D='+values.color)
+        } else if(values.isColorChecked === false){
+            setColorQuery('')
+        }
+    }, [values.color, values.isColorChecked])
 
     const getTotalPages = (linkLast) => {
         console.log(linkLast)
