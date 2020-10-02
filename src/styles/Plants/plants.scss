@@ -64,13 +64,42 @@
 
         &__form {
             height: 20vh;
-            margin-bottom: 3vh;
+            margin-bottom: 5vh;
 
             form {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                input {
+                    padding: 0.1em;
+                    margin-top: 0.5em;
+                    font-size: 0.8em;
+                }
+            }
+
+            &__inputtext {
+                color:rgb(31, 39, 15);
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                font-weight: bolder;
+                font-size: 1.7em;
+
+                span {
+                    color:rgb(95, 128, 42);
+                }
+            }
+
+            &__colortext {
+                color:rgb(31, 39, 15);
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                font-weight: bolder;
+                font-size: 1.1em;
+                margin-top: 0.5em;
+                input {
+                    margin-left: 0.5em;
+                }
             }
 
             &__undertext {

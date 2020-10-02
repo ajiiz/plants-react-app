@@ -5,7 +5,10 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
     return (
         <div className="plants__container__form">
             <form>
-                    <span className="plants__container__form__inputtext">Search by plant name</span>
+                    <p className="plants__container__form__inputtext">
+                    Search by
+                        <span> plants </span>
+                    name</p>
                     <input
                         type="text"
                         name="searchValue"
@@ -14,19 +17,18 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
                     />
                     <p className="plants__container__form__undertext">type search value</p>
                 <label>
-                    <span className="plants__container__form__inputtext">Include your color?</span>
+                    <p className="plants__container__form__colortext">Include your color?
                     <input
                         type="checkbox"
                         name="isColorChecked"
                         value={isColorChecked}
                         checked={isColorChecked}
                         onChange={(e) => handleChange(e)}
-                    />
+                    /></p>
                 </label>
                 {
                     isColorChecked &&
                         <>
-                            <span className="plants__container__form__inputtext">Search by color</span>
                             <input
                                 type="text"
                                 name="color"
