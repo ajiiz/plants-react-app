@@ -11,6 +11,10 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.wrapper {
+  visibility: hidden;
+}
 //Scrollbar Properties
     /* Width */
 ::-webkit-scrollbar {
