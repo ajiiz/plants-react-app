@@ -6,15 +6,15 @@ const Header = () => {
     /* Header Animation */
     let container = useRef(null)
     let header = useRef(null)
-    let tl = new TimelineLite({delay: .4})
+    let tl = new TimelineLite({delay: 2.5})
     useEffect(() => {
         const title = container.firstElementChild
         const subTitle = container.children[1]
         const divider = container.lastElementChild
-        tl.from(header, {duration: 2, opacity: 0, ease: Power1.easeInOut})
+        tl.from(header, {duration: 1.5, opacity: 0, ease: Power1.easeInOut})
         .from(title,  {duration: 1.5, opacity: 0, y: "-250", ease: Power1.easeOut}, 2.5)
-        .from(subTitle, {duration: 2, opacity: 0, x: "250", ease: Power1.easeInOut}, 3)
-        .from(divider,  {duration: 1.5, opacity: 0, x: "-250", ease: Power1.easeInOut}, 3.5)
+        .from(subTitle, {duration: 2, opacity: 0, x: "250", ease: Power1.easeInOut}, 3.5)
+        .from(divider,  {duration: 1.5, opacity: 0, x: "-250", ease: Power1.easeInOut}, 4)
     }, [tl])
 
     return (
