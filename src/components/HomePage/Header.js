@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import '../../styles/Home/header.scss'
-import { Power3, TimelineLite } from 'gsap'
+import { Power1, TimelineLite } from 'gsap'
 
 const Header = () => {
     /* Header Animation */
@@ -11,10 +11,10 @@ const Header = () => {
         const title = container.firstElementChild
         const subTitle = container.children[1]
         const divider = container.lastElementChild
-        tl.from(header, {duration: 2, opacity: 0, ease: Power3.easeInOut})
-        .from(title,  {duration: 1.5, opacity: 0, y: "-250", ease: Power3.easeOut}, 2.5)
-        .from(subTitle, {duration: 2, opacity: 0, x: "250", ease: Power3.easeInOut}, 3)
-        .from(divider,  {duration: 1.5, opacity: 0, x: "-250", ease: Power3.easeInOut}, 3.5)
+        tl.from(header, {duration: 2, opacity: 0, ease: Power1.easeInOut})
+        .from(title,  {duration: 1.5, opacity: 0, y: "-250", ease: Power1.easeOut}, 2.5)
+        .from(subTitle, {duration: 2, opacity: 0, x: "250", ease: Power1.easeInOut}, 3)
+        .from(divider,  {duration: 1.5, opacity: 0, x: "-250", ease: Power1.easeInOut}, 3.5)
     }, [tl])
 
     return (
