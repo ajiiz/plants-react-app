@@ -2,24 +2,22 @@ import React, { useEffect, useRef } from 'react'
 import FaqContent from './FaqContent'
 import { FaqItems } from './FaqItems'
 import '../../styles/Faq/faq.scss'
-import { Power1, TimelineLite } from 'gsap'
+import { Power1, gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Faq = () => {
 
     /* FAQ Animation */
 
     let header = useRef(null)
-    let tl = new TimelineLite({delay: 1})
+    let contentItems = useRef(null)
     useEffect(() => {
-        const title = header.firstElementChild
-        const title_2 = header.children[1]
-        const title_3 = header.children[2]
-        const divider = header.lastElementChild
-        tl.from(title, {duration: 1.6, opacity: 0, ease: Power1.easeInOut})
-            .from(title_2, {duration: 1.6, opacity: 0, ease: Power1.easeInOut}, '-=1')
-            .from(title_3, {duration: 1.6, opacity: 0, ease: Power1.easeInOut}, '-=1')
-            .from(divider, {duration: 1.6, opacity: 0, ease: Power1.easeInOut}, '-=1')
-    }, [tl])
+
+
+
+    }, [])
 
     /* End of the animation */
 
@@ -37,7 +35,7 @@ const Faq = () => {
                 <h3 className="faq__image__title">questions</h3>
                 <hr className="faq__image__divider"></hr>
             </div>
-            <div className="faq__content">
+            <div className="faq__content" ref={el => contentItems = el}>
                 {items}
             </div>
         </div>
