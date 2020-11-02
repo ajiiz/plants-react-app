@@ -15,6 +15,7 @@ const Faq = () => {
     let contentItems = useRef(null)
     useEffect(() => {
 
+        gsap.from(header.children,{opacity: 0, stagger: 0.6, duration: 1.5, y:'60', ease: Power1.easeInOut})
 
 
     }, [])
