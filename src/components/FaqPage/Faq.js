@@ -15,13 +15,14 @@ const Faq = () => {
     let contentItems = useRef(null)
     useEffect(() => {
 
-        gsap.from(header.children,{opacity: 0, stagger: 0.6, duration: 1.5, y:'60', ease: Power1.easeInOut})
+        gsap.from(header.children,{opacity: 0, stagger: 0.6, duration: 1.5, y:'60', ease: Power1.easeInOut, scrollTrigger: {
+            start:'top 50%'
+        }})
         let contentItemsArr = Array.from(contentItems.children)
         contentItemsArr.forEach(item => {
             gsap.from(item,{opacity: 0, stagger: 0.8, duration: 1.2, y:'30', ease: Power1.easeInOut, scrollTrigger: {
                 trigger: item,
                 start: '-96 50%',
-                markers: true,
                 toggleActions: 'play none none reverse'
             }})
         })
