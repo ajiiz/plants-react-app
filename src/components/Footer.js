@@ -27,15 +27,7 @@ const Footer = () => {
                             <FontAwesomeIcon style={styles} icon={ faInstagramSquare } size="lg" />
                         </div>
                         <div className="contact__icons__link__text">
-                            <a href="https://www.instagram.com/piotr_wrobel_/" target="_blank" rel="noopener">DM me on Instagram.</a>
-                        </div>
-                    </div>
-                    <div className="contact__icons__link">
-                        <div className="contact__icons__link__icon">
-                            <FontAwesomeIcon style={styles} icon={ faFacebookSquare } size="lg" />
-                        </div>
-                        <div className="contact__icons__link__text">
-                            <a href="https://www.facebook.com/piotr.wrobel.99" target="_blank" rel="noopener">Add me on Facebook.</a>
+                            <a href="https://www.instagram.com/pvvrbl/" target="_blank" rel="noopener">DM me on Instagram.</a>
                         </div>
                     </div>
                     <div className="contact__icons__link">
