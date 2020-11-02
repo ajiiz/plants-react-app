@@ -11,9 +11,9 @@ const Header = () => {
         const title = container.firstElementChild
         const subTitle = container.children[1]
         const divider = container.lastElementChild
-        gsap.from(title,  {delay: 1.5, duration: 1.5, opacity: 0, y: "-250", ease: Power1.easeOut})
-        gsap.from(subTitle, {delay: 2.5, duration: 2, opacity: 0, x: "250", ease: Power1.easeInOut})
-        gsap.from(divider,  {delay: 4.5, duration: 1.5, opacity: 0, x: "-250", ease: Power1.easeInOut})
+        gsap.from(title,  {delay: 1, duration: 1.5, opacity: 0, y: "-250", ease: Power1.easeOut})
+        gsap.from(subTitle, {delay: 1, duration: 1.5, opacity: 0, x: "250", ease: Power1.easeInOut})
+        gsap.from(divider,  {delay: 1.5, duration: 1.5, opacity: 0, x: "-250", ease: Power1.easeInOut})
     })
 
     /* End of the animation */
