@@ -12,8 +12,8 @@ gsap.registerPlugin(ScrollTrigger)
 const Quote = () => {
 
     /* Quote Animation */
+
     let quoteTitle = useRef(null)
-    let quoteItems = useRef(null)
     useEffect(() => {
 
         gsap.from(quoteTitle,
@@ -23,18 +23,6 @@ const Quote = () => {
                     start: '-96 50%',
                     toggleActions: 'play none none reverse'
                 }
-            })
-            let quoteItemsArr = Array.from(quoteItems.children)
-            quoteItemsArr.forEach(quote => {
-                gsap.from(quote,
-                    {opacity: 0, stagger: 0.8, duration: 1.2, y:'30', ease: Power1.easeInOut,
-                        scrollTrigger: {
-                            trigger: quote,
-                            start: '-96 50%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    }
-                )
             })
     },[])
 
@@ -46,7 +34,7 @@ const Quote = () => {
                 <h3 className="quotes__title__text">green power</h3>
                 <hr className="quotes__title__divider"></hr>
             </div>
-            <div className="quotes__items" ref={el => quoteItems = el}>
+            <div className="quotes__items">
                 <QuoteItem
                     text="The plants are very psychic, but they can express it only by silence and beauty."
                     img={Image_3}
