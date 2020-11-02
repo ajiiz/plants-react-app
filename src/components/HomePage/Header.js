@@ -3,7 +3,9 @@ import '../../styles/Home/header.scss'
 import { Power1, TimelineLite } from 'gsap'
 
 const Header = () => {
+
     /* Header Animation */
+
     let container = useRef(null)
     let header = useRef(null)
     let tl = new TimelineLite({delay: 2.5})
@@ -16,6 +18,8 @@ const Header = () => {
         .from(subTitle, {duration: 2, opacity: 0, x: "250", ease: Power1.easeInOut}, 3.5)
         .from(divider,  {duration: 1.5, opacity: 0, x: "-250", ease: Power1.easeInOut}, 4)
     }, [tl])
+
+    /* End of the animation */
 
     return (
         <header ref={el => header = el}>
