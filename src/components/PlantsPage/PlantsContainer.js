@@ -63,6 +63,9 @@ const PlantsContainer = () => {
     const changeCurrentPage = (n) => {
         if(n !== 0) {
             setCurrentPage(n)
+            if(n !== currentPage) {
+                document.documentElement.scrollTop = 300
+            }
         }
     }
 
