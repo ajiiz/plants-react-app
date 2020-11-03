@@ -283,8 +283,12 @@
 
 @media (max-width: 500px) {
     .plants {
+        font-size: 12px;
         &__container {
             width: 96%;
+            &__form {
+                font-size: 14px;
+            }
             &__buttons {
                 button {
                     font-size: 0.8em;
@@ -292,8 +296,7 @@
             }
             &__items {
                 &__item {
-                    min-height: 50vh;
-                    font-size: 0.9em;
+                    min-height: 80vh;
                     flex-direction: column;
 
                     &__content {
@@ -311,6 +314,30 @@
                 &__item:nth-child(even) {
                     flex-direction: column;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .plants {
+        font-size: 14px;
+        &__container {
+            &__items {
+                &__item {
+                    min-height: 65vh;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .plants {
+        font-size: 12px;
+        &__container {
+            &__form {
+                font-size: 1em;
             }
         }
     }
