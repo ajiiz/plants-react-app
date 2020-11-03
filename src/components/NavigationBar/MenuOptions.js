@@ -27,7 +27,9 @@ const MenuOptions = ({ isOpen, handleClick }) => {
     }
 
     const scrollTop = () => {
-        handleClick()
+        if(isOpen) {
+            handleClick()
+        }
         document.documentElement.scrollTop = 0
     }
 
