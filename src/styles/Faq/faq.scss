@@ -131,3 +131,21 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    .faq {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .faq {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .faq {
+        font-size: 10px;
+    }
+}
