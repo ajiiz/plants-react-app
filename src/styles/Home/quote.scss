@@ -81,14 +81,13 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .quotes {
         height: fit-content;
         padding: 0.5em;
 
         &__title {
             margin: 1em 0em 1em 0em;
-            font-size: 1.3em;
         }
 
         &__items {
@@ -111,12 +110,28 @@
 @media (max-width: 500px) {
     .quotes {
         &__items {
-            font-size: 20px;
+            font-size: 21px;
 
             &__item {
                 width: 80%;
                 height: 70vh;
             }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .quotes {
+        &__items {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 764px) and (max-width: 780px) {
+    .quotes {
+        &__items {
+            font-size: 24px;
         }
     }
 }
