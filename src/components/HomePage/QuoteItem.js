@@ -16,7 +16,7 @@ const QuoteItems = ( { img, text, altText} ) => {
                     {opacity: 0, stagger: 1, duration: 1.2, ease: Power1.easeInOut,
                         scrollTrigger: {
                             trigger: text,
-                            start: '-110 50%',
+                            start: '-140 50%',
                             toggleActions: 'play none none reverse'
                         }
                     }
