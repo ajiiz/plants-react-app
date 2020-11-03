@@ -11,7 +11,7 @@ border: 2px solid transparent;
 }
 `
 
-const MenuOptions = ({ isOpen }) => {
+const MenuOptions = ({ isOpen, handleClick }) => {
 
     const activeLinkStyles = {
         borderColor: 'rgb(85,107,47)'
@@ -26,22 +26,27 @@ const MenuOptions = ({ isOpen }) => {
         marginBottom: '3em'
     }
 
+    const scrollTop = () => {
+        handleClick()
+        document.documentElement.scrollTop = 0
+    }
+
     return (
         <ul className="menu__list" style={isOpen ? activeBurger : null}>
             <StyledLink
                 to="/home"
                 activeStyle={activeLinkStyles}>
-                <li className="menu__list__items">Home</li>
+                <li className="menu__list__items" onClick={scrollTop}>Home</li>
             </StyledLink>
             <StyledLink
                 to="/plants"
                 activeStyle={activeLinkStyles}>
-                <li className="menu__list__items">Plants</li>
+                <li className="menu__list__items" onClick={scrollTop}>Plants</li>
             </StyledLink>
             <StyledLink
                 to="/faq"
                 activeStyle={activeLinkStyles}>
-                <li className="menu__list__items">Faq</li>
+                <li className="menu__list__items" onClick={scrollTop}>Faq</li>
             </StyledLink>
         </ul>
     )

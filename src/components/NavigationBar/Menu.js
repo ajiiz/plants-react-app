@@ -37,7 +37,7 @@ const Menu = () => {
             <div className={isSticky ? 'menu stick' : 'menu'} style={isOpen ? activeBurger : null}>
                 <Logo isOpen={isOpen} />
                 <Hamburger handleClick={handleClick} isOpen={isOpen} />
-                <MenuOptions isOpen={isOpen} />
+                <MenuOptions isOpen={isOpen} handleClick={handleClick} />
             </div>
         </nav>
     )
