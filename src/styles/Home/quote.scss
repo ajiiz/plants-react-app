@@ -85,6 +85,7 @@
     .quotes {
         height: fit-content;
         padding: 0.5em;
+        font-size: 18px;
 
         &__title {
             margin: 1em 0em 1em 0em;
@@ -92,7 +93,6 @@
 
         &__items {
             flex-direction: column;
-            font-size: 18px;
 
             &__item {
                 width: 60%;
@@ -109,9 +109,8 @@
 
 @media (max-width: 500px) {
     .quotes {
+        font-size: 20px;
         &__items {
-            font-size: 21px;
-
             &__item {
                 width: 80%;
                 height: 70vh;
@@ -122,16 +121,6 @@
 
 @media (max-width: 400px) {
     .quotes {
-        &__items {
-            font-size: 18px;
-        }
-    }
-}
-
-@media (min-width: 764px) and (max-width: 780px) {
-    .quotes {
-        &__items {
-            font-size: 24px;
-        }
+        font-size: 18px;
     }
 }
