@@ -27,7 +27,6 @@ const PlantsContainer = () => {
             .then(res => res.json())
             .then(json => {
                 setData(json)
-                console.log(json)
                 let linkLast = json.links.last
                 let maxPages = getTotalPages(linkLast)
                 setTotalPages(maxPages)
@@ -52,7 +51,6 @@ const PlantsContainer = () => {
     }, [values.color, values.isColorChecked])
 
     const getTotalPages = (linkLast) => {
-        console.log(linkLast)
         let maxPages = ""
         for(let i = linkLast.search("page=") + 5; i < linkLast.length; i++) {
             //loop that starts after word 'page' in link and ends when  whole number with all pages is found
@@ -69,7 +67,7 @@ const PlantsContainer = () => {
     }
 
     return (
-            <div className="plants" onClick={()=>console.log()}>
+            <div className="plants">
                 <PlantsHeader />
                 <div className="plants__container">
                     <PlantsForm
