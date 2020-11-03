@@ -15,7 +15,6 @@ const Quote = () => {
 
     let quoteTitle = useRef(null)
     useEffect(() => {
-
         gsap.from(quoteTitle,
             {opacity: 0, stagger: 0.6, duration: 1.5, y:'30', ease: Power1.easeInOut,
                 scrollTrigger: {
@@ -24,7 +23,7 @@ const Quote = () => {
                     toggleActions: 'play none none reverse'
                 }
             })
-    },[])
+    }, [])
 
     /* End of the animation */
 

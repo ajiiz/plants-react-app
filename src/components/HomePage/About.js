@@ -23,7 +23,7 @@ const About = () => {
                 }
             )
         })
-    },[])
+    }, [])
 
     /* End of the animation */
 

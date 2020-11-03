@@ -14,7 +14,6 @@ const Faq = () => {
     let header = useRef(null)
     let contentItems = useRef(null)
     useEffect(() => {
-
         gsap.from(header.children,{opacity: 0, stagger: 0.6, duration: 1.5, y:'60', ease: Power1.easeInOut})
         let contentItemsArr = Array.from(contentItems.children)
         contentItemsArr.forEach(item => {
@@ -28,7 +27,6 @@ const Faq = () => {
                 }
             )
         })
-
     }, [])
 
     /* End of the animation */
