@@ -44,7 +44,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .about {
         font-size: 20px;
         height: 110vh;
@@ -73,6 +73,18 @@
 
 @media (max-width: 500px) {
     .about {
-        font-size: 16px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .about {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 764px) and (max-width: 780px) {
+    .about {
+        font-size: 26px;
     }
 }
