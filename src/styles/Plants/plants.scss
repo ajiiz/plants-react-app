@@ -116,6 +116,36 @@
             flex-wrap: wrap;
             justify-content: center;
 
+            /* Loading Spinner */
+            &__lds-dual-ring {
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+                margin-bottom: 10vh;
+                margin-top: 5vh;
+            }
+            &__lds-dual-ring:after {
+                content: " ";
+                display: block;
+                width: 64px;
+                height: 64px;
+                margin: 8px;
+                border-radius: 50%;
+                border: 6px solid;
+                border-color: rgb(69, 94, 27) transparent rgb(69, 94, 27) transparent;
+                animation: lds-dual-ring 1.2s linear infinite;
+            }
+            @keyframes lds-dual-ring {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                  transform: rotate(360deg);
+                }
+            }
+
+            /* End of loading Spinner */
+
             &__item:hover {
                 border: 2px solid rgb(69, 94, 27);
                 padding: 0px;
