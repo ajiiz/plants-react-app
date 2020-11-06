@@ -4,7 +4,7 @@ const PlantsForm = ({ searchValue, color, isColorChecked, handleChange }) => {
 
     return (
         <div className="plants__container__form">
-            <form>
+            <form onSubmit={(e) => e.preventDefault()}>
                     <p className="plants__container__form__inputtext">
                     Search by
                         <span> plants </span>
