@@ -12,7 +12,7 @@ Website was made to improve my programming and development skills. Feel free to 
 * [License](#license)
 
 ## Status
-#### Published live version at: **link**
+#### Published live version at: **netlify link**
 
 ## Technologies
 #### Project is created with:
@@ -40,7 +40,7 @@ cd plants
 npm start
 ```
 ## Credits
-#### Images used in project:
+#### Images used in the project:
 * [Image-Home-Header](https://www.freepik.com/premium-photo/top-view-realistic-leaves-corners_5711083.htm#page=5&query=Plants&position=11)
 * [Image-Home-Quote-1](https://unsplash.com/photos/Ws92xzbSris)
 * [Image-Home-Quote-2](https://unsplash.com/photos/eA2z1JSzZFI)
