@@ -41,12 +41,12 @@ npm start
 ```
 ## Credits
 #### Images used in project:
-* 1
-* 2
-* 3
-* 4
+* [Image-Home-Header](https://www.freepik.com/premium-photo/top-view-realistic-leaves-corners_5711083.htm#page=5&query=Plants&position=11)
+* [Image-Home-Quote-1](https://unsplash.com/photos/Ws92xzbSris)
+* [Image-Home-Quote-2](https://unsplash.com/photos/eA2z1JSzZFI)
+* [Image-Home-Quote-3](https://unsplash.com/photos/bmM_IdLd1SA)
 * [Image-Home-About](https://unsplash.com/photos/D5c_XKM2tkE)
 * [Image-Plants-Header](https://unsplash.com/photos/RXT63r42ehg)
-* 7
+* [Image-FAQ-Header](https://unsplash.com/photos/WS5yjFjycNY)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
