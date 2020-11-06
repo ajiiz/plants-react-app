@@ -18,12 +18,13 @@ const PlantsContainer = () => {
 
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
-        URL: '/api/v1/species/'
+        URL: 'https://trefle.io/api/v1/species/',
+        PROXYURL: 'https://cors-anywhere.herokuapp.com/'
     }
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(API.URL+'search?q='+query+colorQuery+`&page=${currentPage}`+"&token="+API.KEY)
+        fetch(API.PROXYURL+API.URL+'search?q='+query+colorQuery+`&page=${currentPage}`+"&token="+API.KEY)
             .then(res => res.json())
             .then(json => {
                 setData(json)
@@ -32,6 +33,7 @@ const PlantsContainer = () => {
                 setTotalPages(maxPages)
             })
             .then(()=>setIsLoading(false))
+            .catch(() => console.log(`Can't access ${API.URL} response.`))
     },[currentPage, query, colorQuery])
 
     useEffect(() => {
