@@ -10,6 +10,7 @@ Website was made to improve my programming and development skills. Feel free to 
 * [Setup](#setup)
 * [Credits](#credits)
 * [License](#license)
+* [Contact](#contact)
 
 ## Status
 #### Published live version at: [plantspot](https://plantspot.netlify.app)
@@ -51,3 +52,6 @@ npm start
 * [Image-FAQ-Header](https://unsplash.com/photos/WS5yjFjycNY)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+#### Contact me via e-mail: piotrwrobel.ajiiz@gmail.com
