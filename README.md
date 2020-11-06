@@ -13,6 +13,7 @@ Website was made to improve my programming and development skills. Feel free to 
 
 ## Status
 #### Published live version at: [plantspot](https://plantspot.netlify.app)
+#### Plants fetching errors can occur at any time cause of the proxy server or API issues.
 
 ## Technologies
 #### Project is created with:
