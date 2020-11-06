@@ -81,7 +81,26 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1500px) and (min-width: 1024) {
+    .quotes {
+        &__title {
+            &__text {
+                font-size: 1.9em;
+            }
+        }
+        &__items {
+            &__item {
+                &__content {
+                    &__text {
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
     .quotes {
         height: fit-content;
         padding: 0.5em;
