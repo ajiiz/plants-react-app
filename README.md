@@ -12,7 +12,7 @@ Website was made to improve my programming and development skills. Feel free to 
 * [License](#license)
 
 ## Status
-#### Published live version at: **netlify link**
+#### Published live version at: [plantspot](https://plantspot.netlify.app/home)
 
 ## Technologies
 #### Project is created with:
