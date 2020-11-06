@@ -44,6 +44,19 @@
     }
 }
 
+@media (min-width: 1024px) {
+    .about {
+        &__container {
+            &__title {
+                font-size: 1.4em;
+            }
+            &__text {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
 @media (max-width: 1024px) {
     .about {
         font-size: 20px;
