@@ -19,10 +19,11 @@ Website was made to improve my programming and development skills. Feel free to 
 ## Technologies
 #### Project is created with:
 * [Trefle - global plants API](https://trefle.io/)
-* React
+* ReactJS
 * React Hooks
 * Styled Components
 * GSAP 3
+* SCSS
 
 ## Setup
 * Pull the project from the repository
