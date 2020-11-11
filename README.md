@@ -1,6 +1,6 @@
 # PlantsPot Website
 
-**PlantsPot** is a website created with **React** framework that allows user to search for plants by the name.
+**PlantsPot** is a website created with **ReactJS** that allows user to search for plants by the name.
 You can also include color of the plant.
 All plants are fetched using **Trefle API**.
 Website was made to improve my programming and development skills. Feel free to point out any issues or things I should change to make website much better.
