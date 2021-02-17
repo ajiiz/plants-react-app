@@ -13,6 +13,7 @@ Website was made to improve my programming and development skills. Feel free to 
 * [Contact](#contact)
 
 ## Status
+#### Plants search currently doesn't work - will be fixed soon
 #### Published live version at: [plantspot](https://plantspot.netlify.app)
 #### Plants fetching errors can occur at any time cause of the proxy server or API issues.
 
