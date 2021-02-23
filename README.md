@@ -29,7 +29,7 @@ Website was made to improve my programming and development skills. Feel free to 
 ## Setup
 * Pull the project from the repository
 ```
-git clone https://https://github.com/ajiiz/plants-react-app
+git clone https://github.com/ajiiz/plants-react-app
 cd plants
 ```
 * Open .env_sample.txt file
