@@ -19,7 +19,7 @@ const PlantsContainer = () => {
     const API = {
         KEY: process.env.REACT_APP_API_KEY,
         URL: 'https://trefle.io/api/v1/species/',
-        PROXYURL: 'https://cors-anywhere.herokuapp.com/'
+        PROXYURL: 'https://cors-server-heroku.herokuapp.com/'
     }
 
     useEffect(() => {
