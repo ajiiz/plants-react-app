@@ -55,7 +55,7 @@ npm start
 * [Image-Home-About](https://unsplash.com/photos/D5c_XKM2tkE)
 * [Image-Plants-Header](https://unsplash.com/photos/RXT63r42ehg)
 * [Image-FAQ-Header](https://unsplash.com/photos/WS5yjFjycNY)
-* 
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
