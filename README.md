@@ -1,6 +1,6 @@
 # pw.ajiiz - blog app
 
-*pw.ajiiz** is a blog app made in MERN stack.
+*pw.ajiiz* is a blog app made in MERN stack.
 Implemented login and auth system.
 Visit blog page to see posts.
 Only authenticated user (admin) can add new posts in post page.
